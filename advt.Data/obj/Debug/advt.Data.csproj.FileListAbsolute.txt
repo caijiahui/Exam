@@ -58,3 +58,33 @@ F:\HR\新建文件夹 (2)\PEWork\advt.Data\obj\Debug\advt.Data.csproj.CoreCompil
 F:\HR\新建文件夹 (2)\PEWork\advt.Data\obj\Debug\advt.Data.csproj.CopyComplete
 F:\HR\新建文件夹 (2)\PEWork\advt.Data\obj\Debug\advt.Data.dll
 F:\HR\新建文件夹 (2)\PEWork\advt.Data\obj\Debug\advt.Data.pdb
+E:\公司\eOA\Hr\0107\HRGit\advt.Data\obj\Debug\advt.Data.csprojAssemblyReference.cache
+E:\公司\eOA\Hr\0107\HRGit\advt.Data\obj\Debug\advt.Data.csproj.CoreCompileInputs.cache
+E:\公司\eOA\Hr\0107\HRGit\advt.Data\obj\Debug\advt.Data.dll
+E:\公司\eOA\Hr\0107\HRGit\advt.Data\obj\Debug\advt.Data.pdb
+E:\公司\eOA\Hr\0107\HRGit\advt.Data\bin\Debug\advt.Data.dll
+E:\公司\eOA\Hr\0107\HRGit\advt.Data\bin\Debug\advt.Data.pdb
+E:\公司\eOA\Hr\0107\HRGit\advt.Data\bin\Debug\advt.Cache.dll
+E:\公司\eOA\Hr\0107\HRGit\advt.Data\bin\Debug\advt.Common.dll
+E:\公司\eOA\Hr\0107\HRGit\advt.Data\bin\Debug\advt.Config.dll
+E:\公司\eOA\Hr\0107\HRGit\advt.Data\bin\Debug\advt.Entity.dll
+E:\公司\eOA\Hr\0107\HRGit\advt.Data\bin\Debug\advt.Model.dll
+E:\公司\eOA\Hr\0107\HRGit\advt.Data\bin\Debug\Newtonsoft.Json.dll
+E:\公司\eOA\Hr\0107\HRGit\advt.Data\bin\Debug\System.Web.Mvc.dll
+E:\公司\eOA\Hr\0107\HRGit\advt.Data\bin\Debug\System.Web.Razor.dll
+E:\公司\eOA\Hr\0107\HRGit\advt.Data\bin\Debug\System.Web.WebPages.Razor.dll
+E:\公司\eOA\Hr\0107\HRGit\advt.Data\bin\Debug\System.Web.WebPages.dll
+E:\公司\eOA\Hr\0107\HRGit\advt.Data\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\公司\eOA\Hr\0107\HRGit\advt.Data\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\公司\eOA\Hr\0107\HRGit\advt.Data\bin\Debug\advt.Cache.pdb
+E:\公司\eOA\Hr\0107\HRGit\advt.Data\bin\Debug\advt.Common.pdb
+E:\公司\eOA\Hr\0107\HRGit\advt.Data\bin\Debug\advt.Config.pdb
+E:\公司\eOA\Hr\0107\HRGit\advt.Data\bin\Debug\advt.Entity.pdb
+E:\公司\eOA\Hr\0107\HRGit\advt.Data\bin\Debug\advt.Model.pdb
+E:\公司\eOA\Hr\0107\HRGit\advt.Data\bin\Debug\Newtonsoft.Json.xml
+E:\公司\eOA\Hr\0107\HRGit\advt.Data\bin\Debug\System.Web.Mvc.xml
+E:\公司\eOA\Hr\0107\HRGit\advt.Data\bin\Debug\System.Web.Razor.xml
+E:\公司\eOA\Hr\0107\HRGit\advt.Data\bin\Debug\System.Web.WebPages.Razor.xml
+E:\公司\eOA\Hr\0107\HRGit\advt.Data\bin\Debug\System.Web.WebPages.xml
+E:\公司\eOA\Hr\0107\HRGit\advt.Data\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\公司\eOA\Hr\0107\HRGit\advt.Data\obj\Debug\advt.Data.csproj.CopyComplete

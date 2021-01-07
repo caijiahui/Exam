@@ -10,3 +10,8 @@ F:\HR\新建文件夹 (2)\PEWork\advt.Entity\obj\Debug\advt.Entity.csprojAssembl
 F:\HR\新建文件夹 (2)\PEWork\advt.Entity\obj\Debug\advt.Entity.csproj.CoreCompileInputs.cache
 F:\HR\新建文件夹 (2)\PEWork\advt.Entity\obj\Debug\advt.Entity.dll
 F:\HR\新建文件夹 (2)\PEWork\advt.Entity\obj\Debug\advt.Entity.pdb
+E:\公司\eOA\Hr\0107\HRGit\advt.Entity\bin\Debug\advt.Entity.dll
+E:\公司\eOA\Hr\0107\HRGit\advt.Entity\bin\Debug\advt.Entity.pdb
+E:\公司\eOA\Hr\0107\HRGit\advt.Entity\obj\Debug\advt.Entity.csproj.CoreCompileInputs.cache
+E:\公司\eOA\Hr\0107\HRGit\advt.Entity\obj\Debug\advt.Entity.dll
+E:\公司\eOA\Hr\0107\HRGit\advt.Entity\obj\Debug\advt.Entity.pdb

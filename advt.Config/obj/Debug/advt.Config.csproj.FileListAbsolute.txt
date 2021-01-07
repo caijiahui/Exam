@@ -20,3 +20,14 @@ F:\HR\新建文件夹 (2)\PEWork\advt.Config\obj\Debug\advt.Config.csproj.CoreCo
 F:\HR\新建文件夹 (2)\PEWork\advt.Config\obj\Debug\advt.Config.csproj.CopyComplete
 F:\HR\新建文件夹 (2)\PEWork\advt.Config\obj\Debug\advt.Config.dll
 F:\HR\新建文件夹 (2)\PEWork\advt.Config\obj\Debug\advt.Config.pdb
+E:\公司\eOA\Hr\0107\HRGit\advt.Config\bin\Debug\advt.Config.dll
+E:\公司\eOA\Hr\0107\HRGit\advt.Config\bin\Debug\advt.Config.pdb
+E:\公司\eOA\Hr\0107\HRGit\advt.Config\bin\Debug\advt.Common.dll
+E:\公司\eOA\Hr\0107\HRGit\advt.Config\bin\Debug\Newtonsoft.Json.dll
+E:\公司\eOA\Hr\0107\HRGit\advt.Config\bin\Debug\advt.Common.pdb
+E:\公司\eOA\Hr\0107\HRGit\advt.Config\bin\Debug\Newtonsoft.Json.xml
+E:\公司\eOA\Hr\0107\HRGit\advt.Config\obj\Debug\advt.Config.csprojAssemblyReference.cache
+E:\公司\eOA\Hr\0107\HRGit\advt.Config\obj\Debug\advt.Config.csproj.CoreCompileInputs.cache
+E:\公司\eOA\Hr\0107\HRGit\advt.Config\obj\Debug\advt.Config.csproj.CopyComplete
+E:\公司\eOA\Hr\0107\HRGit\advt.Config\obj\Debug\advt.Config.dll
+E:\公司\eOA\Hr\0107\HRGit\advt.Config\obj\Debug\advt.Config.pdb

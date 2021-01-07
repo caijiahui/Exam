@@ -36,3 +36,22 @@ F:\HR\新建文件夹 (2)\PEWork\advt.Data.Sqlserver\obj\Debug\advt.Data.Sqlserv
 F:\HR\新建文件夹 (2)\PEWork\advt.Data.Sqlserver\obj\Debug\advt.Data.Sqlserver.csproj.CopyComplete
 F:\HR\新建文件夹 (2)\PEWork\advt.Data.Sqlserver\obj\Debug\advt.Data.Sqlserver.dll
 F:\HR\新建文件夹 (2)\PEWork\advt.Data.Sqlserver\obj\Debug\advt.Data.Sqlserver.pdb
+E:\公司\eOA\Hr\0107\HRGit\advt.Data.Sqlserver\obj\Debug\advt.Data.Sqlserver.csprojAssemblyReference.cache
+E:\公司\eOA\Hr\0107\HRGit\advt.Data.Sqlserver\obj\Debug\advt.Data.Sqlserver.csproj.CoreCompileInputs.cache
+E:\公司\eOA\Hr\0107\HRGit\advt.Data.Sqlserver\obj\Debug\advt.Data.Sqlserver.dll
+E:\公司\eOA\Hr\0107\HRGit\advt.Data.Sqlserver\obj\Debug\advt.Data.Sqlserver.pdb
+E:\公司\eOA\Hr\0107\HRGit\advt.Data.Sqlserver\bin\Debug\advt.Data.Sqlserver.dll
+E:\公司\eOA\Hr\0107\HRGit\advt.Data.Sqlserver\bin\Debug\advt.Data.Sqlserver.pdb
+E:\公司\eOA\Hr\0107\HRGit\advt.Data.Sqlserver\bin\Debug\advt.Common.dll
+E:\公司\eOA\Hr\0107\HRGit\advt.Data.Sqlserver\bin\Debug\advt.Data.dll
+E:\公司\eOA\Hr\0107\HRGit\advt.Data.Sqlserver\bin\Debug\advt.Entity.dll
+E:\公司\eOA\Hr\0107\HRGit\advt.Data.Sqlserver\bin\Debug\Newtonsoft.Json.dll
+E:\公司\eOA\Hr\0107\HRGit\advt.Data.Sqlserver\bin\Debug\advt.Cache.dll
+E:\公司\eOA\Hr\0107\HRGit\advt.Data.Sqlserver\bin\Debug\advt.Config.dll
+E:\公司\eOA\Hr\0107\HRGit\advt.Data.Sqlserver\bin\Debug\advt.Common.pdb
+E:\公司\eOA\Hr\0107\HRGit\advt.Data.Sqlserver\bin\Debug\advt.Data.pdb
+E:\公司\eOA\Hr\0107\HRGit\advt.Data.Sqlserver\bin\Debug\advt.Entity.pdb
+E:\公司\eOA\Hr\0107\HRGit\advt.Data.Sqlserver\bin\Debug\Newtonsoft.Json.xml
+E:\公司\eOA\Hr\0107\HRGit\advt.Data.Sqlserver\bin\Debug\advt.Cache.pdb
+E:\公司\eOA\Hr\0107\HRGit\advt.Data.Sqlserver\bin\Debug\advt.Config.pdb
+E:\公司\eOA\Hr\0107\HRGit\advt.Data.Sqlserver\obj\Debug\advt.Data.Sqlserver.csproj.CopyComplete

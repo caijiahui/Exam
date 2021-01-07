@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="DataProvider\advt_Attachment.cs" />
     <Compile Include="DataProvider\advt_Attach_Files.cs" />
+    <Compile Include="DataProvider\ExamSubject.cs" />
     <Compile Include="DataProvider\ExamType.cs" />
     <Compile Include="DataProvider\TestReport.cs" />
     <Compile Include="DataProvider\advt_users_type.cs" />
@@ -65,6 +66,7 @@
     <Compile Include="IDataProvider\advt_Attachment.cs" />
     <Compile Include="IDataProvider\advt_Attach_Files.cs" />
     <Compile Include="IDataProvider\advt_Category.cs" />
+    <Compile Include="IDataProvider\ExamSubject.cs" />
     <Compile Include="IDataProvider\ExamType.cs" />
     <Compile Include="IDataProvider\TestReport.cs" />
     <Compile Include="IDataProvider\advt_users_type.cs" />

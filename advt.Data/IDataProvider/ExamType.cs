@@ -9,6 +9,16 @@ namespace advt.Data
 
     public partial interface IDataProvider
     {
-        IDataReader Get_All_ExamType(int id);
+        #region ExamType , (Ver:2.3.8) at: 2021/1/7 15:58:19
+
+        IDataReader Get_All_ExamType(object objparams);
+
+        int Insert_ExamType(Entity.ExamType info, string[] Include, string[] Exclude);
+
+        int Update_ExamType(Entity.ExamType info, string[] Include, string[] Exclude);
+
+        int Delete_ExamType(int ID);
+
+        #endregion
     }
 }

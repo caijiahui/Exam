@@ -47,6 +47,7 @@
     <Compile Include="DataProvider\advt_log.cs" />
     <Compile Include="DataProvider\advt_page.cs" />
     <Compile Include="DataProvider\advt_posts1.cs" />
+    <Compile Include="DataProvider\ExamSubject.cs" />
     <Compile Include="DataProvider\ExamType.cs" />
     <Compile Include="DataProvider\TestReport.cs" />
     <Compile Include="DataProvider\advt_users_type.cs" />
