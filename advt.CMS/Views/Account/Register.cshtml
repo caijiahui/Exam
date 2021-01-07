@@ -1,0 +1,100 @@
+﻿@model advt.Model.RegisterModel
+@{
+    ViewBag.Title = "用户注册";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = null;
+
+    List<advt.Model.Global.ActionInfo> lnav = new List<advt.Model.Global.ActionInfo>();
+    lnav.Add(new advt.Model.Global.ActionInfo("注册用户"));
+}
+<link href="~/Scripts/style2.css" rel="stylesheet" />
+
+    <div class="content">
+        <h1>User Register Form Widget</h1>
+        <div class="main">
+            <h2>Register For Free Account</h2>
+
+            @using (Html.BeginForm(null, null, new { }, FormMethod.Post, new { @class = "form-horizontal" }))
+            {
+                @Html.AntiForgeryToken()
+                <h5>用户名</h5>
+                @Html.TextBoxFor(m => m.UserName, new { autocomplete = "off" })
+                @Html.ValidationMessageFor(m => m.UserName)
+                @*<input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">*@
+                <h5>邮箱地址</h5>
+                @Html.TextBoxFor(m => m.email, new { autocomplete = "off" })
+                @*@Html.TextBoxFor(m => m.e, new { autocomplete = "off", @class = "form-control", placeholder = "数字,字母或者下划线" })*@
+                <h5>性别</h5>
+                @Html.DropDownListFor(m => m.sex, new SelectList(advt.Manager.Services.LOV.Sex_List, "Value", "Text"), new { })
+                @Html.ValidationMessageFor(m => m.sex)
+                <h5>Password</h5>
+                @Html.PasswordFor(m => m.Password, new { autocomplete = "off" })
+                @Html.ValidationMessageFor(m => m.Password)
+                <h5>确认密码</h5>
+                @Html.PasswordFor(m => m.ConfirmPassword)
+                @Html.ValidationMessageFor(m => m.ConfirmPassword)
+                <input type="submit" value="创建账号">
+            }
+        </div>
+        <p class="footer"></p>
+    </div>
+
+@*@using (Html.BeginForm(null, null, new { }, FormMethod.Post, new { @class = "form-horizontal" }))
+    {
+        @Html.AntiForgeryToken()
+
+
+        <h2 class="form-signin-heading">建立一个新的账号!</h2>
+        <div class="text-danger">
+            @Html.ValidationSummary(true)
+        </div>
+        <div class="form-group">
+            <label for="UserName" class="col-sm-2 control-label">用户名 : </label>
+            <div class="col-xs-12 col-sm-4">
+                @Html.TextBoxFor(m => m.UserName, new { autocomplete = "off", @class = "form-control", placeholder = "数字,字母或者下划线" })
+            </div>
+            <div class="col-xs-12 col-sm-offset-2 text-danger">
+                @Html.ValidationMessageFor(m => m.UserName)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="sex" class="col-sm-2 control-label">性别 : </label>
+            <div class="col-xs-12 col-sm-3">
+                @Html.DropDownListFor(m => m.sex, new SelectList(advt.Manager.Services.LOV.Sex_List, "Value", "Text"), new { @class = "form-control" })
+            </div>
+            <div class="col-xs-12 col-sm-offset-2 text-danger">
+                @Html.ValidationMessageFor(m => m.sex)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="Password" class="col-sm-2 control-label">密码 : </label>
+            <div class="col-xs-12 col-sm-4">
+                @Html.PasswordFor(m => m.Password, new { autocomplete = "off", @class = "form-control", placeholder = "密码不能小于六位" })
+            </div>
+            <div class="col-xs-12 col-sm-offset-2 text-danger">
+                @Html.ValidationMessageFor(m => m.Password)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="ConfirmPassword" class="col-sm-2 control-label">确认密码 : </label>
+            <div class="col-xs-12 col-sm-4">
+                @Html.PasswordFor(m => m.ConfirmPassword, new { autocomplete = "off", @class = "form-control", placeholder = "确认密码" })
+            </div>
+            <div class="col-xs-12 col-sm-offset-2 text-danger">
+                @Html.ValidationMessageFor(m => m.ConfirmPassword)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-4">
+                <button type="submit" class="btn btn-primary btn-lg btn-block">注 册</button>
+            </div>
+        </div>
+    }*@
+
+@section Scripts {
+    @Scripts.Render("~/bundles/rwd_jqueryvalidate")
+}

@@ -1,0 +1,68 @@
+E:\Work\AKMCCTOS\PEWork\advt.BLL\bin\Debug\advt.BLL.dll
+E:\Work\AKMCCTOS\PEWork\advt.BLL\bin\Debug\advt.BLL.pdb
+E:\Work\AKMCCTOS\PEWork\advt.BLL\bin\Debug\advt.Cache.dll
+E:\Work\AKMCCTOS\PEWork\advt.BLL\bin\Debug\advt.Common.dll
+E:\Work\AKMCCTOS\PEWork\advt.BLL\bin\Debug\advt.Config.dll
+E:\Work\AKMCCTOS\PEWork\advt.BLL\bin\Debug\advt.Data.dll
+E:\Work\AKMCCTOS\PEWork\advt.BLL\bin\Debug\advt.Data.Sqlserver.dll
+E:\Work\AKMCCTOS\PEWork\advt.BLL\bin\Debug\advt.Entity.dll
+E:\Work\AKMCCTOS\PEWork\advt.BLL\bin\Debug\advt.Model.dll
+E:\Work\AKMCCTOS\PEWork\advt.BLL\bin\Debug\Newtonsoft.Json.dll
+E:\Work\AKMCCTOS\PEWork\advt.BLL\bin\Debug\System.Web.Mvc.dll
+E:\Work\AKMCCTOS\PEWork\advt.BLL\bin\Debug\System.Web.Razor.dll
+E:\Work\AKMCCTOS\PEWork\advt.BLL\bin\Debug\System.Web.WebPages.Razor.dll
+E:\Work\AKMCCTOS\PEWork\advt.BLL\bin\Debug\System.Web.WebPages.dll
+E:\Work\AKMCCTOS\PEWork\advt.BLL\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\Work\AKMCCTOS\PEWork\advt.BLL\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\Work\AKMCCTOS\PEWork\advt.BLL\bin\Debug\advt.Cache.pdb
+E:\Work\AKMCCTOS\PEWork\advt.BLL\bin\Debug\advt.Common.pdb
+E:\Work\AKMCCTOS\PEWork\advt.BLL\bin\Debug\advt.Config.pdb
+E:\Work\AKMCCTOS\PEWork\advt.BLL\bin\Debug\advt.Data.Sqlserver.pdb
+E:\Work\AKMCCTOS\PEWork\advt.BLL\bin\Debug\advt.Data.pdb
+E:\Work\AKMCCTOS\PEWork\advt.BLL\bin\Debug\advt.Entity.pdb
+E:\Work\AKMCCTOS\PEWork\advt.BLL\bin\Debug\advt.Model.pdb
+E:\Work\AKMCCTOS\PEWork\advt.BLL\bin\Debug\Newtonsoft.Json.xml
+E:\Work\AKMCCTOS\PEWork\advt.BLL\bin\Debug\System.Web.Mvc.xml
+E:\Work\AKMCCTOS\PEWork\advt.BLL\bin\Debug\System.Web.Razor.xml
+E:\Work\AKMCCTOS\PEWork\advt.BLL\bin\Debug\System.Web.WebPages.Razor.xml
+E:\Work\AKMCCTOS\PEWork\advt.BLL\bin\Debug\System.Web.WebPages.xml
+E:\Work\AKMCCTOS\PEWork\advt.BLL\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\Work\AKMCCTOS\PEWork\advt.BLL\obj\Debug\advt.BLL.csprojAssemblyReference.cache
+E:\Work\AKMCCTOS\PEWork\advt.BLL\obj\Debug\advt.BLL.csproj.CoreCompileInputs.cache
+E:\Work\AKMCCTOS\PEWork\advt.BLL\obj\Debug\advt.BLL.csproj.CopyComplete
+E:\Work\AKMCCTOS\PEWork\advt.BLL\obj\Debug\advt.BLL.dll
+E:\Work\AKMCCTOS\PEWork\advt.BLL\obj\Debug\advt.BLL.pdb
+F:\HR\新建文件夹 (2)\PEWork\advt.BLL\bin\Debug\advt.BLL.dll
+F:\HR\新建文件夹 (2)\PEWork\advt.BLL\bin\Debug\advt.BLL.pdb
+F:\HR\新建文件夹 (2)\PEWork\advt.BLL\bin\Debug\advt.Cache.dll
+F:\HR\新建文件夹 (2)\PEWork\advt.BLL\bin\Debug\advt.Common.dll
+F:\HR\新建文件夹 (2)\PEWork\advt.BLL\bin\Debug\advt.Config.dll
+F:\HR\新建文件夹 (2)\PEWork\advt.BLL\bin\Debug\advt.Data.dll
+F:\HR\新建文件夹 (2)\PEWork\advt.BLL\bin\Debug\advt.Data.Sqlserver.dll
+F:\HR\新建文件夹 (2)\PEWork\advt.BLL\bin\Debug\advt.Entity.dll
+F:\HR\新建文件夹 (2)\PEWork\advt.BLL\bin\Debug\advt.Model.dll
+F:\HR\新建文件夹 (2)\PEWork\advt.BLL\bin\Debug\Newtonsoft.Json.dll
+F:\HR\新建文件夹 (2)\PEWork\advt.BLL\bin\Debug\System.Web.Mvc.dll
+F:\HR\新建文件夹 (2)\PEWork\advt.BLL\bin\Debug\System.Web.Razor.dll
+F:\HR\新建文件夹 (2)\PEWork\advt.BLL\bin\Debug\System.Web.WebPages.Razor.dll
+F:\HR\新建文件夹 (2)\PEWork\advt.BLL\bin\Debug\System.Web.WebPages.dll
+F:\HR\新建文件夹 (2)\PEWork\advt.BLL\bin\Debug\Microsoft.Web.Infrastructure.dll
+F:\HR\新建文件夹 (2)\PEWork\advt.BLL\bin\Debug\System.Web.WebPages.Deployment.dll
+F:\HR\新建文件夹 (2)\PEWork\advt.BLL\bin\Debug\advt.Cache.pdb
+F:\HR\新建文件夹 (2)\PEWork\advt.BLL\bin\Debug\advt.Common.pdb
+F:\HR\新建文件夹 (2)\PEWork\advt.BLL\bin\Debug\advt.Config.pdb
+F:\HR\新建文件夹 (2)\PEWork\advt.BLL\bin\Debug\advt.Data.Sqlserver.pdb
+F:\HR\新建文件夹 (2)\PEWork\advt.BLL\bin\Debug\advt.Data.pdb
+F:\HR\新建文件夹 (2)\PEWork\advt.BLL\bin\Debug\advt.Entity.pdb
+F:\HR\新建文件夹 (2)\PEWork\advt.BLL\bin\Debug\advt.Model.pdb
+F:\HR\新建文件夹 (2)\PEWork\advt.BLL\bin\Debug\Newtonsoft.Json.xml
+F:\HR\新建文件夹 (2)\PEWork\advt.BLL\bin\Debug\System.Web.Mvc.xml
+F:\HR\新建文件夹 (2)\PEWork\advt.BLL\bin\Debug\System.Web.Razor.xml
+F:\HR\新建文件夹 (2)\PEWork\advt.BLL\bin\Debug\System.Web.WebPages.Razor.xml
+F:\HR\新建文件夹 (2)\PEWork\advt.BLL\bin\Debug\System.Web.WebPages.xml
+F:\HR\新建文件夹 (2)\PEWork\advt.BLL\bin\Debug\System.Web.WebPages.Deployment.xml
+F:\HR\新建文件夹 (2)\PEWork\advt.BLL\obj\Debug\advt.BLL.csprojAssemblyReference.cache
+F:\HR\新建文件夹 (2)\PEWork\advt.BLL\obj\Debug\advt.BLL.csproj.CoreCompileInputs.cache
+F:\HR\新建文件夹 (2)\PEWork\advt.BLL\obj\Debug\advt.BLL.csproj.CopyComplete
+F:\HR\新建文件夹 (2)\PEWork\advt.BLL\obj\Debug\advt.BLL.dll
+F:\HR\新建文件夹 (2)\PEWork\advt.BLL\obj\Debug\advt.BLL.pdb

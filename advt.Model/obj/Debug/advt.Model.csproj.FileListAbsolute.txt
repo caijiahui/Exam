@@ -1,0 +1,44 @@
+E:\Work\AKMCCTOS\PEWork\advt.Model\bin\Debug\advt.Model.dll
+E:\Work\AKMCCTOS\PEWork\advt.Model\bin\Debug\advt.Model.pdb
+E:\Work\AKMCCTOS\PEWork\advt.Model\bin\Debug\advt.Entity.dll
+E:\Work\AKMCCTOS\PEWork\advt.Model\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\Work\AKMCCTOS\PEWork\advt.Model\bin\Debug\System.Web.Helpers.dll
+E:\Work\AKMCCTOS\PEWork\advt.Model\bin\Debug\System.Web.Mvc.dll
+E:\Work\AKMCCTOS\PEWork\advt.Model\bin\Debug\System.Web.Razor.dll
+E:\Work\AKMCCTOS\PEWork\advt.Model\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\Work\AKMCCTOS\PEWork\advt.Model\bin\Debug\System.Web.WebPages.dll
+E:\Work\AKMCCTOS\PEWork\advt.Model\bin\Debug\System.Web.WebPages.Razor.dll
+E:\Work\AKMCCTOS\PEWork\advt.Model\bin\Debug\advt.Entity.pdb
+E:\Work\AKMCCTOS\PEWork\advt.Model\bin\Debug\System.Web.Helpers.xml
+E:\Work\AKMCCTOS\PEWork\advt.Model\bin\Debug\System.Web.Mvc.xml
+E:\Work\AKMCCTOS\PEWork\advt.Model\bin\Debug\System.Web.Razor.xml
+E:\Work\AKMCCTOS\PEWork\advt.Model\bin\Debug\System.Web.WebPages.xml
+E:\Work\AKMCCTOS\PEWork\advt.Model\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\Work\AKMCCTOS\PEWork\advt.Model\bin\Debug\System.Web.WebPages.Razor.xml
+E:\Work\AKMCCTOS\PEWork\advt.Model\obj\Debug\advt.Model.csprojAssemblyReference.cache
+E:\Work\AKMCCTOS\PEWork\advt.Model\obj\Debug\advt.Model.csproj.CoreCompileInputs.cache
+E:\Work\AKMCCTOS\PEWork\advt.Model\obj\Debug\advt.Model.csproj.CopyComplete
+E:\Work\AKMCCTOS\PEWork\advt.Model\obj\Debug\advt.Model.dll
+E:\Work\AKMCCTOS\PEWork\advt.Model\obj\Debug\advt.Model.pdb
+F:\HR\新建文件夹 (2)\PEWork\advt.Model\bin\Debug\advt.Model.dll
+F:\HR\新建文件夹 (2)\PEWork\advt.Model\bin\Debug\advt.Model.pdb
+F:\HR\新建文件夹 (2)\PEWork\advt.Model\bin\Debug\advt.Entity.dll
+F:\HR\新建文件夹 (2)\PEWork\advt.Model\bin\Debug\Microsoft.Web.Infrastructure.dll
+F:\HR\新建文件夹 (2)\PEWork\advt.Model\bin\Debug\System.Web.Helpers.dll
+F:\HR\新建文件夹 (2)\PEWork\advt.Model\bin\Debug\System.Web.Mvc.dll
+F:\HR\新建文件夹 (2)\PEWork\advt.Model\bin\Debug\System.Web.Razor.dll
+F:\HR\新建文件夹 (2)\PEWork\advt.Model\bin\Debug\System.Web.WebPages.Deployment.dll
+F:\HR\新建文件夹 (2)\PEWork\advt.Model\bin\Debug\System.Web.WebPages.dll
+F:\HR\新建文件夹 (2)\PEWork\advt.Model\bin\Debug\System.Web.WebPages.Razor.dll
+F:\HR\新建文件夹 (2)\PEWork\advt.Model\bin\Debug\advt.Entity.pdb
+F:\HR\新建文件夹 (2)\PEWork\advt.Model\bin\Debug\System.Web.Helpers.xml
+F:\HR\新建文件夹 (2)\PEWork\advt.Model\bin\Debug\System.Web.Mvc.xml
+F:\HR\新建文件夹 (2)\PEWork\advt.Model\bin\Debug\System.Web.Razor.xml
+F:\HR\新建文件夹 (2)\PEWork\advt.Model\bin\Debug\System.Web.WebPages.xml
+F:\HR\新建文件夹 (2)\PEWork\advt.Model\bin\Debug\System.Web.WebPages.Deployment.xml
+F:\HR\新建文件夹 (2)\PEWork\advt.Model\bin\Debug\System.Web.WebPages.Razor.xml
+F:\HR\新建文件夹 (2)\PEWork\advt.Model\obj\Debug\advt.Model.csprojAssemblyReference.cache
+F:\HR\新建文件夹 (2)\PEWork\advt.Model\obj\Debug\advt.Model.csproj.CoreCompileInputs.cache
+F:\HR\新建文件夹 (2)\PEWork\advt.Model\obj\Debug\advt.Model.csproj.CopyComplete
+F:\HR\新建文件夹 (2)\PEWork\advt.Model\obj\Debug\advt.Model.dll
+F:\HR\新建文件夹 (2)\PEWork\advt.Model\obj\Debug\advt.Model.pdb

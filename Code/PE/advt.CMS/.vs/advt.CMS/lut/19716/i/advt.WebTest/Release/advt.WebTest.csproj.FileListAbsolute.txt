@@ -1,0 +1,12 @@
+E:\PE\advt.CMS\.vs\advt.CMS\lut\0\b\advt.WebTest\bin\Release\ApplicationInsights.config
+E:\PE\advt.CMS\.vs\advt.CMS\lut\0\b\advt.WebTest\bin\Release\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+E:\PE\advt.CMS\.vs\advt.CMS\lut\0\b\advt.WebTest\bin\Release\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+E:\PE\advt.CMS\.vs\advt.CMS\lut\0\b\advt.WebTest\bin\Release\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+E:\PE\advt.CMS\.vs\advt.CMS\lut\0\b\advt.WebTest\bin\Release\zh-Hans\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+E:\PE\advt.CMS\.vs\advt.CMS\lut\0\b\advt.WebTest\bin\Release\zh-Hans\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+E:\PE\advt.CMS\.vs\advt.CMS\lut\0\b\advt.WebTest\bin\Release\zh-Hans\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+E:\PE\advt.CMS\.vs\advt.CMS\lut\0\b\advt.WebTest\bin\Release\advt.WebTest.dll
+E:\PE\advt.CMS\.vs\advt.CMS\lut\0\i\advt.WebTest\Release\advt.WebTest.csproj.CoreCompileInputs.cache
+E:\PE\advt.CMS\.vs\advt.CMS\lut\0\i\advt.WebTest\Release\advt.WebTest.csproj.CopyComplete
+E:\PE\advt.CMS\.vs\advt.CMS\lut\0\i\advt.WebTest\Release\advt.WebTest.dll
+E:\PE\advt.CMS\.vs\advt.CMS\lut\0\i\advt.WebTest\Release\advt.WebTest.csprojAssemblyReference.cache

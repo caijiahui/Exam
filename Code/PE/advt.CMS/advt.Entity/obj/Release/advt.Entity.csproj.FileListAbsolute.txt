@@ -1,0 +1,12 @@
+E:\PE\advt.CMS\advt.Entity\bin\Release\advt.Entity.dll
+E:\PE\advt.CMS\advt.Entity\bin\Release\advt.Entity.pdb
+E:\PE\advt.CMS\advt.Entity\obj\Release\advt.Entity.csproj.CoreCompileInputs.cache
+E:\PE\advt.CMS\advt.Entity\obj\Release\advt.Entity.dll
+E:\PE\advt.CMS\advt.Entity\obj\Release\advt.Entity.pdb
+E:\PE\advt.CMS\advt.Entity\obj\Release\advt.Entity.csprojAssemblyReference.cache
+E:\Work\ICOTS_Work\PEWork\Code\PE\advt.CMS\advt.Entity\bin\Release\advt.Entity.dll
+E:\Work\ICOTS_Work\PEWork\Code\PE\advt.CMS\advt.Entity\bin\Release\advt.Entity.pdb
+E:\Work\ICOTS_Work\PEWork\Code\PE\advt.CMS\advt.Entity\obj\Release\advt.Entity.csproj.CoreCompileInputs.cache
+E:\Work\ICOTS_Work\PEWork\Code\PE\advt.CMS\advt.Entity\obj\Release\advt.Entity.dll
+E:\Work\ICOTS_Work\PEWork\Code\PE\advt.CMS\advt.Entity\obj\Release\advt.Entity.pdb
+E:\Work\ICOTS_Work\PEWork\Code\PE\advt.CMS\advt.Entity\obj\Release\advt.Entity.csprojAssemblyReference.cache

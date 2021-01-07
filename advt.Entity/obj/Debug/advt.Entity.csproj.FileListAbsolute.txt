@@ -1,0 +1,12 @@
+E:\Work\AKMCCTOS\PEWork\advt.Entity\bin\Debug\advt.Entity.dll
+E:\Work\AKMCCTOS\PEWork\advt.Entity\bin\Debug\advt.Entity.pdb
+E:\Work\AKMCCTOS\PEWork\advt.Entity\obj\Debug\advt.Entity.csproj.CoreCompileInputs.cache
+E:\Work\AKMCCTOS\PEWork\advt.Entity\obj\Debug\advt.Entity.dll
+E:\Work\AKMCCTOS\PEWork\advt.Entity\obj\Debug\advt.Entity.pdb
+E:\Work\AKMCCTOS\PEWork\advt.Entity\obj\Debug\advt.Entity.csprojAssemblyReference.cache
+F:\HR\新建文件夹 (2)\PEWork\advt.Entity\bin\Debug\advt.Entity.dll
+F:\HR\新建文件夹 (2)\PEWork\advt.Entity\bin\Debug\advt.Entity.pdb
+F:\HR\新建文件夹 (2)\PEWork\advt.Entity\obj\Debug\advt.Entity.csprojAssemblyReference.cache
+F:\HR\新建文件夹 (2)\PEWork\advt.Entity\obj\Debug\advt.Entity.csproj.CoreCompileInputs.cache
+F:\HR\新建文件夹 (2)\PEWork\advt.Entity\obj\Debug\advt.Entity.dll
+F:\HR\新建文件夹 (2)\PEWork\advt.Entity\obj\Debug\advt.Entity.pdb

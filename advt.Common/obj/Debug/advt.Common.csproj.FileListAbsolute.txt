@@ -1,0 +1,18 @@
+E:\Work\AKMCCTOS\PEWork\advt.Common\bin\Debug\advt.Common.dll
+E:\Work\AKMCCTOS\PEWork\advt.Common\bin\Debug\advt.Common.pdb
+E:\Work\AKMCCTOS\PEWork\advt.Common\bin\Debug\Newtonsoft.Json.dll
+E:\Work\AKMCCTOS\PEWork\advt.Common\bin\Debug\Newtonsoft.Json.xml
+E:\Work\AKMCCTOS\PEWork\advt.Common\obj\Debug\advt.Common.csproj.CoreCompileInputs.cache
+E:\Work\AKMCCTOS\PEWork\advt.Common\obj\Debug\advt.Common.csproj.CopyComplete
+E:\Work\AKMCCTOS\PEWork\advt.Common\obj\Debug\advt.Common.dll
+E:\Work\AKMCCTOS\PEWork\advt.Common\obj\Debug\advt.Common.pdb
+E:\Work\AKMCCTOS\PEWork\advt.Common\obj\Debug\advt.Common.csprojAssemblyReference.cache
+F:\HR\新建文件夹 (2)\PEWork\advt.Common\bin\Debug\advt.Common.dll
+F:\HR\新建文件夹 (2)\PEWork\advt.Common\bin\Debug\advt.Common.pdb
+F:\HR\新建文件夹 (2)\PEWork\advt.Common\bin\Debug\Newtonsoft.Json.dll
+F:\HR\新建文件夹 (2)\PEWork\advt.Common\bin\Debug\Newtonsoft.Json.xml
+F:\HR\新建文件夹 (2)\PEWork\advt.Common\obj\Debug\advt.Common.csprojAssemblyReference.cache
+F:\HR\新建文件夹 (2)\PEWork\advt.Common\obj\Debug\advt.Common.csproj.CoreCompileInputs.cache
+F:\HR\新建文件夹 (2)\PEWork\advt.Common\obj\Debug\advt.Common.csproj.CopyComplete
+F:\HR\新建文件夹 (2)\PEWork\advt.Common\obj\Debug\advt.Common.dll
+F:\HR\新建文件夹 (2)\PEWork\advt.Common\obj\Debug\advt.Common.pdb

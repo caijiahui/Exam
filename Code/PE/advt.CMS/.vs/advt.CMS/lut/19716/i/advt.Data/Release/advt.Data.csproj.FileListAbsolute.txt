@@ -1,0 +1,11 @@
+E:\PE\advt.CMS\.vs\advt.CMS\lut\0\b\advt.Data\bin\Release\advt.Data.dll
+E:\PE\advt.CMS\.vs\advt.CMS\lut\0\i\advt.Data\Release\advt.Data.csprojAssemblyReference.cache
+E:\PE\advt.CMS\.vs\advt.CMS\lut\0\i\advt.Data\Release\advt.Data.csproj.CoreCompileInputs.cache
+E:\PE\advt.CMS\.vs\advt.CMS\lut\0\i\advt.Data\Release\advt.Data.csproj.CopyComplete
+E:\PE\advt.CMS\.vs\advt.CMS\lut\0\i\advt.Data\Release\advt.Data.dll
+E:\Work\ICOTS_Work\PEWork\Code\PE\advt.CMS\.vs\advt.CMS\lut\0\b\advt.Data\bin\Release\advt.Data.dll
+E:\Work\ICOTS_Work\PEWork\Code\PE\advt.CMS\.vs\advt.CMS\lut\0\i\advt.Data\Release\advt.Data.csprojAssemblyReference.cache
+E:\Work\ICOTS_Work\PEWork\Code\PE\advt.CMS\.vs\advt.CMS\lut\0\i\advt.Data\Release\advt.Data.csproj.CoreCompileInputs.cache
+E:\Work\ICOTS_Work\PEWork\Code\PE\advt.CMS\.vs\advt.CMS\lut\0\i\advt.Data\Release\advt.Data.csproj.CopyComplete
+E:\Work\ICOTS_Work\PEWork\Code\PE\advt.CMS\.vs\advt.CMS\lut\0\i\advt.Data\Release\advt.Data.dll
+E:\Work\ICOTS_Work\PEWork\Code\PE\advt.CMS\.vs\advt.CMS\lut\0\b\advt.Data\bin\Debug\advt.Data.dll

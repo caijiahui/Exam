@@ -1,0 +1,40 @@
+﻿@model advt.Model.LoginModel
+
+@{
+    ViewBag.Title = "用户登陆";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = null;
+
+    List<advt.Model.Global.ActionInfo> lnav = new List<advt.Model.Global.ActionInfo>();
+    lnav.Add(new advt.Model.Global.ActionInfo("用户登录"));
+}
+
+@section head{
+    @Styles.Render("~/Content/nlogin")
+}
+<link href="~/Scripts/style.css" rel="stylesheet" />
+@using (Html.BeginForm(null, null, new { }, FormMethod.Post, new { @class = "form-signin" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.Hidden("returnUrl")
+<div class="main">
+    <div class="login">
+        <div class="login-top">
+            <img src="~/Images/p.png" />
+        </div>
+        <h1>用户登陆</h1>
+        <div class="login-bottom">
+            <input type="text" id="inputUserName" name="UserName" class="login_input" placeholder="请输入用户名">
+            <input type="password" id="inputPassword" name="Password" class="password" placeholder="密码">
+            <input type="submit" value="登 陆">
+            @*<a href="@Url.Action("Register", "Account")"><p>注册账号? Click Here</p></a>*@
+        </div>
+    </div>
+</div>
+    <div class="footer">
+        <p>管理平台登陆界面</p>
+    </div>
+}
+
+
+

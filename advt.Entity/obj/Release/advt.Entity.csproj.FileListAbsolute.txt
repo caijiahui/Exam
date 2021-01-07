@@ -1,0 +1,5 @@
+E:\Work\AKMCCTOS\PEWork\advt.Entity\bin\Release\advt.Entity.dll
+E:\Work\AKMCCTOS\PEWork\advt.Entity\bin\Release\advt.Entity.pdb
+E:\Work\AKMCCTOS\PEWork\advt.Entity\obj\Release\advt.Entity.csproj.CoreCompileInputs.cache
+E:\Work\AKMCCTOS\PEWork\advt.Entity\obj\Release\advt.Entity.dll
+E:\Work\AKMCCTOS\PEWork\advt.Entity\obj\Release\advt.Entity.pdb

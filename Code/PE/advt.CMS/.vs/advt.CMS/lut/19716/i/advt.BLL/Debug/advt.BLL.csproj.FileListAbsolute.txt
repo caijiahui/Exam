@@ -1,0 +1,5 @@
+E:\Work\ICOTS_Work\PEWork\Code\PE\advt.CMS\.vs\advt.CMS\lut\0\b\advt.BLL\bin\Debug\advt.BLL.dll
+E:\Work\ICOTS_Work\PEWork\Code\PE\advt.CMS\.vs\advt.CMS\lut\0\i\advt.BLL\Debug\advt.BLL.csprojAssemblyReference.cache
+E:\Work\ICOTS_Work\PEWork\Code\PE\advt.CMS\.vs\advt.CMS\lut\0\i\advt.BLL\Debug\advt.BLL.csproj.CoreCompileInputs.cache
+E:\Work\ICOTS_Work\PEWork\Code\PE\advt.CMS\.vs\advt.CMS\lut\0\i\advt.BLL\Debug\advt.BLL.csproj.CopyComplete
+E:\Work\ICOTS_Work\PEWork\Code\PE\advt.CMS\.vs\advt.CMS\lut\0\i\advt.BLL\Debug\advt.BLL.dll

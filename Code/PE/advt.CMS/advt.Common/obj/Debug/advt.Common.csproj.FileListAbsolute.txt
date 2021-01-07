@@ -1,0 +1,17 @@
+E:\PE\advt.CMS\advt.Common\bin\Debug\advt.Common.dll
+E:\PE\advt.CMS\advt.Common\bin\Debug\advt.Common.pdb
+E:\PE\advt.CMS\advt.Common\bin\Debug\Newtonsoft.Json.dll
+E:\PE\advt.CMS\advt.Common\bin\Debug\Newtonsoft.Json.xml
+E:\PE\advt.CMS\advt.Common\obj\Debug\advt.Common.csproj.CoreCompileInputs.cache
+E:\PE\advt.CMS\advt.Common\obj\Debug\advt.Common.csproj.CopyComplete
+E:\PE\advt.CMS\advt.Common\obj\Debug\advt.Common.dll
+E:\PE\advt.CMS\advt.Common\obj\Debug\advt.Common.pdb
+E:\PE\advt.CMS\advt.Common\obj\Debug\advt.Common.csprojAssemblyReference.cache
+E:\Work\ICOTS_Work\PEWork\Code\PE\advt.CMS\advt.Common\bin\Debug\advt.Common.dll
+E:\Work\ICOTS_Work\PEWork\Code\PE\advt.CMS\advt.Common\bin\Debug\advt.Common.pdb
+E:\Work\ICOTS_Work\PEWork\Code\PE\advt.CMS\advt.Common\bin\Debug\Newtonsoft.Json.dll
+E:\Work\ICOTS_Work\PEWork\Code\PE\advt.CMS\advt.Common\bin\Debug\Newtonsoft.Json.xml
+E:\Work\ICOTS_Work\PEWork\Code\PE\advt.CMS\advt.Common\obj\Debug\advt.Common.csproj.CoreCompileInputs.cache
+E:\Work\ICOTS_Work\PEWork\Code\PE\advt.CMS\advt.Common\obj\Debug\advt.Common.csproj.CopyComplete
+E:\Work\ICOTS_Work\PEWork\Code\PE\advt.CMS\advt.Common\obj\Debug\advt.Common.dll
+E:\Work\ICOTS_Work\PEWork\Code\PE\advt.CMS\advt.Common\obj\Debug\advt.Common.pdb

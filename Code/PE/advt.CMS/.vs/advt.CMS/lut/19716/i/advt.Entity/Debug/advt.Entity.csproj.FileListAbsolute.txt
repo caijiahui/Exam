@@ -1,0 +1,4 @@
+E:\Work\ICOTS_Work\PEWork\Code\PE\advt.CMS\.vs\advt.CMS\lut\0\b\advt.Entity\bin\Debug\advt.Entity.dll
+E:\Work\ICOTS_Work\PEWork\Code\PE\advt.CMS\.vs\advt.CMS\lut\0\i\advt.Entity\Debug\advt.Entity.csproj.CoreCompileInputs.cache
+E:\Work\ICOTS_Work\PEWork\Code\PE\advt.CMS\.vs\advt.CMS\lut\0\i\advt.Entity\Debug\advt.Entity.csproj.CopyComplete
+E:\Work\ICOTS_Work\PEWork\Code\PE\advt.CMS\.vs\advt.CMS\lut\0\i\advt.Entity\Debug\advt.Entity.dll

@@ -1,0 +1,205 @@
+﻿@model advt.Entity.advt_users
+
+@{
+    ViewBag.Title = "用户基本信息";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    List<advt.Model.Global.ActionInfo> lnav = new List<advt.Model.Global.ActionInfo>();
+    lnav.Add(new advt.Model.Global.ActionInfo("管理首页", "Index", "Management", new { Area = "Users" }));
+    if (Login.Isadmin)
+    {
+        lnav.Add(new advt.Model.Global.ActionInfo("用户管理", "Index", "Users", new { Area = "Admin" }));
+    }
+    lnav.Add(new advt.Model.Global.ActionInfo("用户信息"));
+}
+
+@Html.Partial("~/Views/Shared/_Navigate.cshtml", lnav)
+
+@section head{
+    @Styles.Render("~/Content/fmUserinfo")
+}
+
+@using (Html.BeginForm(null, null, new { }, FormMethod.Post, new { @class = "form-signin top15" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(model => model.id)
+    @Html.Hidden("returnurl")
+
+    <div class="inline-block text-danger">@Html.ValidationSummary(true)</div>
+    
+    <div class="clearfix">
+        <h2 class="top15">@Html.DisplayNameFor(model => model.username) : @Model.username</h2>
+    </div>
+    <div class="form-group-item top15">
+        <label for="nickname" class="form-group-item-left">@Html.DisplayNameFor(model => model.nickname) : </label>
+        <div class="form-group-item-right">
+            @Html.TextBoxFor(model => model.nickname, new { @class = "form-control" })
+            <div class="inline-block text-danger">@Html.ValidationMessageFor(model => model.nickname)</div>
+        </div>
+    </div>
+    
+    <div class="form-group-item">
+        <label for="firstname" class="form-group-item-left">@Html.DisplayNameFor(model => model.firstname) : </label>
+        <div class="form-group-item-right">
+            @Html.TextBoxFor(model => model.firstname, new { @class = "form-control", data_val_required = "姓 不能为空!", data_val = "true", size = "4" })
+            <div class="inline-block text-danger">@Html.ValidationMessageFor(model => model.firstname)</div>
+        </div>
+    </div>
+    
+    <div class="form-group-item">
+        <label for="lastname" class="form-group-item-left">@Html.DisplayNameFor(model => model.lastname) : </label>
+        <div class="form-group-item-right">
+            @Html.TextBoxFor(model => model.lastname, new { @class = "form-control", data_val_required = "名字 不能为空!", data_val = "true", size = "8" })
+            <div class="inline-block text-danger">@Html.ValidationMessageFor(model => model.lastname)</div>
+        </div>
+    </div>
+    
+    <div class="form-group-item">
+        <label for="sex" class="form-group-item-left">@Html.DisplayNameFor(model => model.sex) : </label>
+        <div class="form-group-item-right">
+            @Html.DropDownListFor(model => model.sex, new SelectList(advt.Manager.Services.LOV.Sex_List, "Value", "Text"), new { @class = "form-control" })
+            <div class="inline-block text-danger">@Html.ValidationMessageFor(model => model.sex)</div>
+        </div>
+    </div>
+    
+    <div class="form-group-item">
+        <label for="password" class="form-group-item-left">@Html.DisplayNameFor(model => model.password) : </label>
+        <div class="form-group-item-right">
+            @Html.ActionLink("修改密码", "ChangePassword", new { id = ViewBag.id })
+        </div>
+    </div>
+    
+    <div class="form-group-item">
+        <label for="mobile" class="form-group-item-left">@Html.DisplayNameFor(model => model.mobile) : </label>
+        <div class="form-group-item-right">
+            @Html.TextBoxFor(model => model.mobile, new { @class = "form-control" })
+            <div class="inline-block text-danger">@Html.ValidationMessageFor(model => model.mobile)</div>
+        </div>
+    </div>
+    
+    <div class="form-group-item">
+        <label for="phone" class="form-group-item-left">@Html.DisplayNameFor(model => model.phone) : </label>
+        <div class="form-group-item-right">
+            @Html.TextBoxFor(model => model.phone, new { size = 35, @class = "form-control" })
+            <div class="inline-block text-danger">@Html.ValidationMessageFor(model => model.phone)</div>
+        </div>
+    </div>
+    
+    <div class="form-group-item">
+        <label for="qq" class="form-group-item-left">@Html.DisplayNameFor(model => model.qq) : </label>
+        <div class="form-group-item-right">
+            @Html.TextBoxFor(model => model.qq, new { @class = "form-control" })
+            <div class="inline-block text-danger">@Html.ValidationMessageFor(model => model.qq)</div>
+        </div>
+    </div>
+    
+    <div class="form-group-item">
+        <label for="msn" class="form-group-item-left">@Html.DisplayNameFor(model => model.msn) : </label>
+        <div class="form-group-item-right">
+            @Html.TextBoxFor(model => model.msn, new { @class = "form-control" })
+            <div class="inline-block text-danger">@Html.ValidationMessageFor(model => model.msn)</div>
+        </div>
+    </div>
+    
+    <div class="form-group-item">
+        <label for="email" class="form-group-item-left">@Html.DisplayNameFor(model => model.email) : </label>
+        <div class="form-group-item-right">
+            @Html.TextBoxFor(model => model.email, new { @class = "form-control" })
+            <div class="inline-block text-danger">@Html.ValidationMessageFor(model => model.email)</div>
+        </div>
+    </div>
+    
+    <div class="form-group-item">
+        <label for="description" class="form-group-item-left">@Html.DisplayNameFor(model => model.description) : </label>
+        <div class="form-group-item-right">
+            @Html.TextBoxFor(model => model.description, new { @class = "form-control" })
+            <div class="inline-block text-danger">@Html.ValidationMessageFor(model => model.description)</div>
+        </div>
+    </div>
+    
+    if (Login.Isadmin)
+    {
+        List<advt.Entity.wb_user_group> lwb_user_group = ViewData["lwb_user_group"] as List<advt.Entity.wb_user_group>;
+    <div class="form-group-item">
+        <label for="roles" class="form-group-item-left">角色 : </label>
+        <div class="form-group-item-right">
+            @Html.DropDownListFor(model => model.roles, new SelectList(advt.Manager.Services.LOV.Role_List, "Value", "Text"), new { @class = "form-control" })
+            <div class="inline-block text-danger">@Html.ValidationMessageFor(model => model.roles)</div>
+        </div>
+    </div>
+    <div class="form-group-item">
+        <label for="roles" class="form-group-item-left">用户组 : </label>
+        <div class="form-group-item-right">
+            @Html.DropDownListFor(model => model.usergroupid, new SelectList(lwb_user_group, "id", "name"), "", new { @class = "form-control" })
+            <div class="inline-block text-danger">@Html.ValidationMessageFor(model => model.usergroupid)</div>
+        </div>
+    </div>
+    }
+    
+    <div class="form-group-item">
+        <label for="credits" class="form-group-item-left">声望 : </label>
+        @Model.credits
+    </div>
+    
+    <div class="form-group-item">
+        <label for="showemail" class="form-group-item-left">显示Email : </label>
+        @Html.CheckBoxFor(model => model.showemail, new { @class = "form-control" })
+        <div class="form-group-item-right">
+            <div class="inline-block text-danger">@Html.ValidationMessageFor(model => model.showemail)</div>
+        </div>
+    </div>
+    
+    <div class="form-group-item">
+        <label for="status" class="form-group-item-left">用户状态 : </label>
+        <div class="form-group-item-right">
+            @if (Login.Isadmin)
+            {
+                @Html.DropDownListFor(model => model.status, new SelectList(advt.Manager.Services.LOV.Normal_List, "Value", "Text"), new { @class = "form-control" })
+                <div class="inline-block text-danger">@Html.ValidationMessageFor(model => model.status)</div>
+            }
+            else
+            {
+                switch (Model.status)
+                {
+                    case (int)advt.Entity.Status.Normal.Enable:
+                @:允许
+                    break;
+                    case (int)advt.Entity.Status.Normal.Disable:
+                @:禁止
+                    break;
+                    case (int)advt.Entity.Status.Normal.Verify:
+                @:待审核
+                    break;
+                }
+            }
+        </div>
+    </div>
+    
+    <div class="form-group-item">
+        <label class="form-group-item-left">创建时间 : </label>
+        <div class="form-group-item-right">@Model.createdate.ToString("yyyy-MM-dd hh:mm:ss")</div>
+    </div>
+    
+    <div class="form-group-item top15">
+        <button type="submit" class="btn btn-primary btn-lg userinfo-submit-btn">修改</button>
+    </div>
+}
+
+<div class="panel panel-danger top15">
+
+    <div class="panel-heading">推荐用户注册：</div>
+    <div class="panel-body">
+        <dl class="dl-horizontal">
+            <dt>将地址复制分享:</dt>
+            <dd><small tabindex="0">@(Url.Action("Register", "Account", new { Area = "", id = Login.UserID }))</small></dd>
+        </dl>
+        <div>
+             推荐将给你带来意想不到的好处！(永久有效)
+        </div>
+    </div>
+    <div class="panel-footer text-right bg-warning" style="color: #86837C"><small>--如有问题请联系客服--</small></div>
+</div>
+
+@section scripts{
+    @Scripts.Render("~/yhjs/jvalidate")
+}

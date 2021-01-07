@@ -1,0 +1,11 @@
+E:\Work\AKMCCTOS\PEWork\advt.Config\bin\Release\advt.Config.dll
+E:\Work\AKMCCTOS\PEWork\advt.Config\bin\Release\advt.Config.pdb
+E:\Work\AKMCCTOS\PEWork\advt.Config\bin\Release\advt.Common.dll
+E:\Work\AKMCCTOS\PEWork\advt.Config\bin\Release\Newtonsoft.Json.dll
+E:\Work\AKMCCTOS\PEWork\advt.Config\bin\Release\advt.Common.pdb
+E:\Work\AKMCCTOS\PEWork\advt.Config\bin\Release\Newtonsoft.Json.xml
+E:\Work\AKMCCTOS\PEWork\advt.Config\obj\Release\advt.Config.csprojAssemblyReference.cache
+E:\Work\AKMCCTOS\PEWork\advt.Config\obj\Release\advt.Config.csproj.CoreCompileInputs.cache
+E:\Work\AKMCCTOS\PEWork\advt.Config\obj\Release\advt.Config.csproj.CopyComplete
+E:\Work\AKMCCTOS\PEWork\advt.Config\obj\Release\advt.Config.dll
+E:\Work\AKMCCTOS\PEWork\advt.Config\obj\Release\advt.Config.pdb

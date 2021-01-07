@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\MSTest.TestAdapter.1.2.1\build\net45\MSTest.TestAdapter.props" Condition="Exists('..\packages\MSTest.TestAdapter.1.2.1\build\net45\MSTest.TestAdapter.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{261D67BE-7BEE-40CD-96F7-CB81171838A3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>advt.WebTest</RootNamespace>
+    <AssemblyName>advt.WebTest</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">15.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.1.2.1\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.1.2.1\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="UnitTest1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Config\general.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\advt.BLL\advt.BLL.csproj">
+      <Project>{008f6830-2f45-4dfd-9400-bd4ee4575182}</Project>
+      <Name>advt.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\advt.Cache\advt.Cache.csproj">
+      <Project>{04ecd8a9-dddf-46e5-8ea6-00a2348a76e1}</Project>
+      <Name>advt.Cache</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\advt.CMS\advt.CMS.csproj">
+      <Project>{7bdc0e09-5989-4aa7-b84f-c09d62ef10c5}</Project>
+      <Name>advt.CMS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\advt.Common\advt.Common.csproj">
+      <Project>{8fc5eb01-5ec9-43f8-8fcf-48aaebb3ea48}</Project>
+      <Name>advt.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\advt.Config\advt.Config.csproj">
+      <Project>{ed5e2139-6b74-4e65-918c-ba116680cf3e}</Project>
+      <Name>advt.Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\advt.Data.Sqlserver\advt.Data.Sqlserver.csproj">
+      <Project>{d8cea435-5a5d-4bb2-b1da-915ced7141b6}</Project>
+      <Name>advt.Data.Sqlserver</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\advt.Data\advt.Data.csproj">
+      <Project>{3aa9ef06-079d-4cfb-a8c8-7329227429a0}</Project>
+      <Name>advt.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\advt.Entity\advt.Entity.csproj">
+      <Project>{e6b5b216-50a2-4730-8c28-82b9327993d2}</Project>
+      <Name>advt.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\advt.Manager\advt.Manager.csproj">
+      <Project>{a6c3853b-7d7b-4a1d-93fb-d3fb8766e366}</Project>
+      <Name>advt.Manager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\advt.Model\advt.Model.csproj">
+      <Project>{75da223b-5db2-4f94-a70e-fdc9517dc22a}</Project>
+      <Name>advt.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\advt.Service\advt.Service.csproj">
+      <Project>{c2d37b52-2464-4864-bb9a-caf29666f3f3}</Project>
+      <Name>advt.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\advt.WinService\advt.WinService.csproj">
+      <Project>{b5529df7-2402-4956-9c72-c082d2094f19}</Project>
+      <Name>advt.WinService</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.1.2.1\build\net45\MSTest.TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.1.2.1\build\net45\MSTest.TestAdapter.props'))" />
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.1.2.1\build\net45\MSTest.TestAdapter.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.1.2.1\build\net45\MSTest.TestAdapter.targets'))" />
+  </Target>
+  <Import Project="..\packages\MSTest.TestAdapter.1.2.1\build\net45\MSTest.TestAdapter.targets" Condition="Exists('..\packages\MSTest.TestAdapter.1.2.1\build\net45\MSTest.TestAdapter.targets')" />
+</Project>

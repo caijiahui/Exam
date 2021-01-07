@@ -1,0 +1,675 @@
+﻿@model advt.Model.PageModel.PEModel
+<script src="~/Scripts/common.js"></script>
+<link href="~/Scripts/jquery-ui.min.css" rel="stylesheet" />
+<link href="~/Scripts/jquery-ui.min.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-ui.min.js"></script>
+<link href="~/Scripts/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+<script src="~/Scripts/moment-with-locales.js"></script>
+<script src="~/Scripts/moment-with-locales.js"></script>
+<script src="~/Scripts/bootstrap-datetimepicker.min.js"></script>
+<script src="~/Scripts/bootstrap-datetimepicker.zh-CN.js"></script>
+<script src="~/Scripts/schedule.js"></script>
+<link href="~/Scripts/jquery-ui.css" rel="stylesheet" />
+<style>
+</style>
+<div id="content">
+    <section>
+        <div ng-app="myApp" ng-controller="myCtrl" ng-cloak="">
+            <div class="text-center"><h2>{{data.V_CMSCategory.categoryname}}</h2></div>
+            <div class="section-body" style="padding-bottom:100px;">
+                @using (Html.BeginForm("Index", "PEMain", FormMethod.Get))
+                {
+                    <div style="margin-bottom:40px;display:inline">
+                        <div class="modelsel" style="display:inline-block;vertical-align:bottom;">
+                            <label>条件</label>
+                        </div>
+                        <div class="modelinput" style="display:inline-block; width:20%;margin-left:20px;">
+                            @Html.TextBox("searchdata", null, new { @class = "modelform form-control" })
+                        </div>
+                    </div>
+                    <div style="margin-bottom:40px; display:inline;margin-left:25%">
+                        <label>上传日期</label>
+                        <div class="modelsel" style="display:inline-block;vertical-align:bottom;">
+                            <label>From</label>
+                        </div>
+                        <div class="modelinput" style="display:inline-block; width:15%;margin-left:20px;">
+                            @Html.TextBox("startdt", null, new { @class = "modelform form-control datepicker", @readonly = "readonly" })
+                        </div>
+                        <div class="modelsel" style="display:inline-block;vertical-align:bottom;">
+                            <label>To</label>
+                        </div>
+                        <div class="modelinput" style="display:inline-block; width:15%;margin-left:20px;">
+                            @Html.TextBox("enddt", null, new { @class = "modelform form-control datepicker", @readonly = "readonly" })
+                        </div>
+                        @Html.Hidden("tname", @Model.tname, new { @class = "modelform form-control" })
+                        @Html.Hidden("tid", @Model.V_CMSCategory.id, new { @class = "modelform form-control" })
+                    </div>
+                    <div style="text-align:center;margin-top:20px">
+                        <button class="btn btn-primary" type="submit"><i class="fa fa-search"></i> 查找</button>
+                    </div>
+                }
+                @*<button class="btn btn-default-bright btn-raised" data-toggle="modal" data-target="#simpleModal" ng-click="openColumn()"><i class="fa fa-plus"></i>&nbsp;&nbsp;编辑栏位</button><br><br>*@
+                <button class="btn btn-default-bright btn-raised" data-toggle="modal" data-target="#ItemModal" ng-click="addItem()"><i class="fa fa-plus"></i>&nbsp;&nbsp;Add Item</button><br><br>
+                @if (Model.L_topics != null)
+                {
+                    <div>
+                        <table class="table table-bordered table-hover table-responsive">
+                            <thead>
+                                <tr>
+                                    <th ng-if="data.V_CMSCategory.item1_show== true" style="width:1%">{{data.V_CMSCategory.item1}}</th>
+                                    <th ng-if="data.V_CMSCategory.item10_show== true" style="width:8%">{{data.V_CMSCategory.item10}}</th>
+                                    <th ng-if="data.V_CMSCategory.casename_show== true" style="width:15%">{{data.V_CMSCategory.casename}}</th>
+                                    <th ng-if="data.V_CMSCategory.item2_show== true" style="width:8%">{{data.V_CMSCategory.item2}}</th>
+                                    <th ng-if="data.V_CMSCategory.item3_show== true" style="width:8%">{{data.V_CMSCategory.item3}}</th>
+                                    <th ng-if="data.V_CMSCategory.item4_show== true" style="width:8%">{{data.V_CMSCategory.item4}}</th>
+                                    <th ng-if="data.V_CMSCategory.item5_show== true" style="width:8%">{{data.V_CMSCategory.item5}}</th>
+                                    <th ng-if="data.V_CMSCategory.item6_show== true" style="width:8%">{{data.V_CMSCategory.item6}}</th>
+                                    <th ng-if="data.V_CMSCategory.item7_show== true" style="width:8%">{{data.V_CMSCategory.item7}}</th>
+                                    <th ng-if="data.V_CMSCategory.item8_show== true" style="width:8%">{{data.V_CMSCategory.item8}}</th>
+                                    <th ng-if="data.V_CMSCategory.item9_show== true" style="width:8%">{{data.V_CMSCategory.item9}}</th>
+
+                                    @*<th ng-if="data.V_CMSCategory.description_show== true">{{data.V_CMSCategory.description}}</th>*@
+                                    <th ng-if="data.V_CMSCategory.attachment_show== true" style="width:8%">{{data.V_CMSCategory.attachment}}</th>
+                                    <th ng-if="data.V_CMSCategory.createdt_show== true" style="width:5%">{{data.V_CMSCategory.createdt}}</th>
+                                    <th ng-if="data.V_CMSCategory.updatedt_show== true" style="width:5%">{{data.V_CMSCategory.updatedt}}</th>
+                                    <th ng-if="data.V_CMSCategory.ursername_show== true" style="width:4%">{{data.V_CMSCategory.username}}</th>
+                                    <th ng-if="data.V_CMSCategory.state_show== true" style="width:6%">{{data.V_CMSCategory.state}}</th>
+                                    <th style="width:10%"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="item in data.L_topics" style="font-size:10px; text-align:center;">
+                                    <td ng-if="checkstate(item.state)">{{item.ids}}</td>
+                                    <td ng-if="data.V_CMSCategory.item10_show== true&&checkstate(item.state)&&item.item10=='packing'">组装</td>
+                                    <td ng-if="data.V_CMSCategory.item10_show== true&&checkstate(item.state)&&item.item10=='test'">测试</td>
+                                    <td ng-if="data.V_CMSCategory.item10_show== true&&checkstate(item.state)&&item.item10!='test'&&item.item10!='packing'"></td>
+                                    <td ng-if="data.V_CMSCategory.casename_show== true&&checkstate(item.state)">{{item.casename}}</td>
+                                    <td ng-if="data.V_CMSCategory.item2_show== true&&checkstate(item.state)">{{item.item2}}</td>
+                                    <td ng-if="data.V_CMSCategory.item3_show== true&&checkstate(item.state)">{{item.item3}}</td>
+                                    <td ng-if="data.V_CMSCategory.item4_show== true&&checkstate(item.state)">{{item.item4}}</td>
+                                    <td ng-if="data.V_CMSCategory.item5_show== true&&checkstate(item.state)">{{item.item5}}</td>
+                                    <td ng-if="data.V_CMSCategory.item6_show== true&&checkstate(item.state)">{{item.item6}}</td>
+                                    <td ng-if="data.V_CMSCategory.item7_show== true&&checkstate(item.state)">{{item.item7}}</td>
+                                    <td ng-if="data.V_CMSCategory.item8_show== true&&checkstate(item.state)">{{item.item8}}</td>
+                                    <td ng-if="data.V_CMSCategory.item9_show== true&&checkstate(item.state)">{{datetimeformat(item.item9)}}</td>
+                                    <td ng-if="data.V_CMSCategory.attachment_show== true && item.attachment!=null&&checkstate(item.state)" onclick="test({{item.id}})"><a href="/PEMain/UploadFile?id={{item.id}}" target="_blank"><i class="fa fa-arrow-circle-down" style="font-size:20px" aria-hidden="true"></i></a></td>
+                                    <td ng-if="data.V_CMSCategory.attachment_show== true && item.attachment==null&&checkstate(item.state)"></td>
+                                    <td ng-if="data.V_CMSCategory.createdt_show== true&&checkstate(item.state)">{{datetimeformat(item.createdt)}}</td>
+                                    <td ng-if="data.V_CMSCategory.updatedt_show== true&&checkstate(item.state)">{{datetimeformat(item.updatedt)}}</td>
+                                    <td ng-if="data.V_CMSCategory.ursername_show== true&&checkstate(item.state)">{{item.username|reverse}}</td>
+                                    <td ng-if="data.V_CMSCategory.state_show== true&&checkstate(item.state)&&item.state=='Open'">
+                                        <i class="fa fa-circle" style="color:red"></i>
+                                    </td>
+                                    <td ng-if="data.V_CMSCategory.state_show== true&&checkstate(item.state)&&item.state=='Close'">
+                                        <i class="fa fa-circle" style="color:blue"></i>
+                                    </td>
+                                    <td ng-if="checkstate(item.state)">
+                                        <button class="btn btn-primary" ng-click="showdes($index)" data-toggle="modal" data-target="#DetailModal"><i class="fa fa-search" style="font-size:10px"> </i></button>
+                                        <button class="btn btn-primary" ng-click="editItem($index)" data-toggle="modal" data-target="#ItemModal"><i class="fa fa-edit fa-lg" style="font-size:10px"></i></button>
+                                        <button class="btn btn-primary" ng-click="deleteItem($index)" ng-if="data.isAdministrators==true"><i class="fa fa-trash" style="font-size:10px"></i></button>
+                                    </td>
+                                    <td ng-if="!checkstate(item.state)" style="background:#f3efef"><s>{{item.ids}}</s></td>
+                                    <td ng-if="data.V_CMSCategory.item10_show== true&&!checkstate(item.state)&&item.item10=='packing'" style="background:#f3efef">组装</td>
+                                    <td ng-if="data.V_CMSCategory.item10_show== true&&!checkstate(item.state)&&item.item10!='packing'&&item.item10!='test'" style="background:#f3efef"></td>
+                                    <td ng-if="data.V_CMSCategory.item10_show== true&&!checkstate(item.state)&&item.item10=='test'" style="background:#f3efef">测试</td>
+                                    <td ng-if="data.V_CMSCategory.casename_show== true&&!checkstate(item.state)" style="background:#f3efef">{{item.casename}}</td>
+                                    <td ng-if="data.V_CMSCategory.item2_show== true&&!checkstate(item.state)" style="background:#f3efef">{{item.item2}}</td>
+                                    <td ng-if="data.V_CMSCategory.item3_show== true&&!checkstate(item.state)" style="background:#f3efef">{{item.item3}}</td>
+                                    <td ng-if="data.V_CMSCategory.item4_show== true&&!checkstate(item.state)" style="background:#f3efef">{{item.item4}}</td>
+                                    <td ng-if="data.V_CMSCategory.item5_show== true&&!checkstate(item.state)" style="background:#f3efef">{{item.item5}}</td>
+                                    <td ng-if="data.V_CMSCategory.item6_show== true&&!checkstate(item.state)" style="background:#f3efef">{{item.item6}}</td>
+                                    <td ng-if="data.V_CMSCategory.item7_show== true&&!checkstate(item.state)" style="background:#f3efef">{{item.item7}}</td>
+                                    <td ng-if="data.V_CMSCategory.item8_show== true&&!checkstate(item.state)" style="background:#f3efef">{{item.item8}}</td>
+                                    <td ng-if="data.V_CMSCategory.item9_show== true&&!checkstate(item.state)" style="background:#f3efef">{{datetimeformat(item.item9)}}</td>
+
+                                    <td ng-if="data.V_CMSCategory.attachment_show== true && item.attachment!=null&&!checkstate(item.state)" style="background:#f3efef"><a href="/PEMain/UploadFile?id={{item.id}}" download="234.xlsx" target="_blank"><i class="fa fa-arrow-circle-down" style="font-size:20px" aria-hidden="true"></i></a></td>
+                                    <td ng-if="data.V_CMSCategory.attachment_show== true && item.attachment==null&&!checkstate(item.state)" style="background:#f3efef"></td>
+                                    <td ng-if="data.V_CMSCategory.createdt_show== true&&!checkstate(item.state)" style="background:#f3efef">{{datetimeformat(item.createdt)}}</td>
+                                    <td ng-if="data.V_CMSCategory.updatedt_show== true&&!checkstate(item.state)" style="background:#f3efef">{{datetimeformat(item.updatedt)}}</td>
+                                    <td ng-if="data.V_CMSCategory.ursername_show== true&&!checkstate(item.state)" style="background:#f3efef">{{item.username|reverse}}</td>
+                                    <td ng-if="data.V_CMSCategory.state_show== true&&!checkstate(item.state)&&item.state=='Open'" style="background:#f3efef">
+                                        <i class="fa fa-circle" style="color:red"></i>
+                                    </td>
+                                    <td ng-if="data.V_CMSCategory.state_show== true&&!checkstate(item.state)&&item.state=='Close'" style="background:#f3efef">
+                                        <i class="fa fa-circle" style="color:blue"></i>
+                                    </td>
+                                    <td ng-if="!checkstate(item.state)" style="background:#f3efef">
+                                        <button class="btn btn-primary" ng-click="showdes($index)" data-toggle="modal" data-target="#DetailModal"><i class="fa fa-search" style="font-size:10px"> </i></button>
+                                        <button class="btn btn-primary" ng-click="editItem($index)"  data-toggle="modal" data-target="#ItemModal"><i class="fa fa-edit fa-lg" style="font-size:10px"></i></button>
+                                        <button class="btn btn-primary" ng-click="deleteItem($index)" ng-if="data.isAdministrators==true"><i class="fa fa-trash" style="font-size:10px"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="top10 paginationwrap">
+                        <div class="Pagination y">
+                            @Html.Pagination((int)ViewBag.PageSize, (int)ViewBag.Index, (int)ViewBag.RecordCount, new { @ViewType = 1, @Template = "{List}", @Postfix = "", @VirtualPath = "", @Identifier = "page", @Encrypt = false })
+                        </div>
+                    </div>
+                }
+
+            </div>
+            @*栏位编辑*@
+            <div class="modal fade" data-backdrop="static" id="simpleModal" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true" style="display: none;">
+                <div class="modal-dialog" style="float:left;left:30%">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h4 class="modal-title" id="simpleModalLabel">编辑栏位</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="floating-label">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="form-group form-inline">
+                                            <select ng-model="dialogInfo.V_CMSCategory.categoryname" class="form-control" id="txtname" style="display:block" ng-change="c_categoryname()">
+                                                <option ng-repeat="x in data.L_categoryname" value="{{x.Key}}" id="location">{{x.Value}}</option>
+                                            </select>
+                                            @*<input type="text" class="form-control" ng-model="dialogInfo.V_CMSCategory.categoryname">*@
+                                            <label>板块名称</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group form-inline">
+                                            <input type="text" class="form-control" ng-model="dialogInfo.V_CMSCategory.casename">
+                                            <label>案例名称</label><input type="checkbox" ng-model="dialogInfo.V_CMSCategory.casename_show" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group form-inline">
+                                            <input type="text" class="form-control" ng-model="dialogInfo.V_CMSCategory.attachment">
+                                            <label>资料</label><input type="checkbox" ng-model="dialogInfo.V_CMSCategory.attachment_show" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group form-inline">
+                                            <input type="text" class="form-control" ng-model="dialogInfo.V_CMSCategory.state">
+                                            <label>状态</label><input type="checkbox" ng-model="dialogInfo.V_CMSCategory.state_show" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group form-inline">
+                                            <input type="text" class="form-control" ng-model="dialogInfo.V_CMSCategory.username">
+                                            <label>分享人</label><input type="checkbox" ng-model="dialogInfo.V_CMSCategory.ursername_show" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group form-inline">
+                                            <input type="text" class="form-control" ng-model="dialogInfo.V_CMSCategory.updatedt">
+                                            <label>更新事件</label><input type="checkbox" ng-model="dialogInfo.V_CMSCategory.updatedt_show" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group form-inline">
+                                            <input type="text" class="form-control" ng-model="dialogInfo.V_CMSCategory.createdt">
+                                            <label>上传时间</label><input type="checkbox" ng-model="dialogInfo.V_CMSCategory.createdt_show" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group form-inline">
+                                            <input type="text" class="form-control" ng-model="dialogInfo.V_CMSCategory.description">
+                                            <label>描述</label><input type="checkbox" ng-model="dialogInfo.V_CMSCategory.description_show" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group form-inline">
+                                            <input type="text" class="form-control" ng-model="dialogInfo.V_CMSCategory.item1">
+                                            <label>7</label><input type="checkbox" ng-model="dialogInfo.V_CMSCategory.item1_show" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group form-inline">
+                                            <input type="text" class="form-control" ng-model="dialogInfo.V_CMSCategory.item2">
+                                            <label>item2</label><input type="checkbox" ng-model="dialogInfo.V_CMSCategory.item2_show" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group form-inline">
+                                            <input type="text" class="form-control" ng-model="dialogInfo.V_CMSCategory.item3">
+                                            <label>item3</label><input type="checkbox" ng-model="dialogInfo.V_CMSCategory.item3_show" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group form-inline">
+                                            <input type="text" class="form-control" ng-model="dialogInfo.V_CMSCategory.item4">
+                                            <label>item4</label><input type="checkbox" ng-model="dialogInfo.V_CMSCategory.item4_show" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group form-inline">
+                                            <input type="text" class="form-control" ng-model="dialogInfo.V_CMSCategory.item5">
+                                            <label>item5</label><input type="checkbox" ng-model="dialogInfo.V_CMSCategory.item5_show" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group form-inline">
+                                            <input type="text" class="form-control" ng-model="dialogInfo.V_CMSCategory.item6">
+                                            <label>item6</label><input type="checkbox" ng-model="dialogInfo.V_CMSCategory.item6_show" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group form-inline">
+                                            <input type="text" class="form-control" ng-model="dialogInfo.V_CMSCategory.item7">
+                                            <label>item7</label><input type="checkbox" ng-model="dialogInfo.V_CMSCategory.item7_show" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group form-inline">
+                                            <input type="text" class="form-control" ng-model="dialogInfo.V_CMSCategory.item8">
+                                            <label>item8</label><input type="checkbox" ng-model="dialogInfo.V_CMSCategory.item8_show" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group form-inline">
+                                            <input type="text" class="form-control" ng-model="dialogInfo.V_CMSCategory.item9">
+                                            <label>item9</label><input type="checkbox" ng-model="dialogInfo.V_CMSCategory.item9_show" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group form-inline">
+                                            <input type="text" class="form-control" ng-model="dialogInfo.V_CMSCategory.item10">
+                                            <label>item10</label><input type="checkbox" ng-model="dialogInfo.V_CMSCategory.item10_show" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary" ng-click="saveColumn()">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            @*topics填写内容*@
+            <div class="modal fade" data-backdrop="static" id="ItemModal" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true" style="display: none;">
+                <div class="modal-dialog" style="float:left;left:20%;width:60%">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h4 class="modal-title" id="simpleModalLabel">编辑内容</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="floating-label">
+                                <div class="row">
+                                    <div class="col-sm-6" ng-if="data.V_CMSCategory.casename_show== true">
+                                        <div class="form-group form-inline">
+                                            <input type="text" readonly="readonly" style="border-style:none" ng-model="data.V_CMSCategory.casename" />
+                                            <input type="text" class="form-control" ng-model="dialogInfo.V_topics.casename">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6" ng-if="data.V_CMSCategory.item2_show== true">
+                                        <div class="form-group form-inline">
+                                            <input type="text" readonly="readonly" style="border-style:none" ng-model="data.V_CMSCategory.item2" />
+                                            <input type="text" class="form-control" ng-model="dialogInfo.V_topics.item2">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6" ng-if="data.V_CMSCategory.attachment_show== true">
+                                    <div class="form-group form-inline">
+                                        <input type="text" readonly="readonly" style="border-style:none" ng-model="data.V_CMSCategory.attachment" />
+                                        <button type="button" ng-click="openfile()"><i class="fa fa-arrow-circle-up"></i> Upload</button>
+                                        <input type="text" id="filename" ng-model="dialogInfo.V_topics.filename" readonly="readonly" class="form-control" />
+                                        <div id="divfile" style="display:none;border:1px solid rgb(204, 204, 204);width:250px;height:150px;background-color:white;position:absolute;z-index:20;left:200px;top:30px">
+                                            <form id="uploadForm">
+                                                <div><h4 style="display:inline">Upload</h4><span style="margin-left:130px"><button class="close" ng-click="closefile()">×</button></span></div>
+                                                <hr style="margin-top:10px" />
+                                                <div>  <input type="file" name="file" id="filedata" /></div>
+                                                <div style="float:right;margin-top:10px"> <button type="button" ng-click="checkfile()">提交</button></div>
+                                                <input type="hidden" @*id="filevalue"*@ ng-model="dialogInfo.V_topics.attachment" />
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group form-inline" ng-if="data.V_CMSCategory.state_show== true">
+                                        <input type="text" readonly="readonly" style="border-style:none" ng-model="data.V_CMSCategory.state" />
+                                        <select ng-model="dialogInfo.V_topics.state" class="form-control" id="txtstate">
+                                            <option value="">--请选择--</option>
+                                            <option ng-repeat="x in data.L_state" value="{{x.Key}}" id="location">{{x.Value}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6" ng-if="data.V_CMSCategory.item3_show== true">
+                                    <div class="form-group form-inline">
+                                        <input type="text" readonly="readonly" style="border-style:none" ng-model="data.V_CMSCategory.item3" />
+                                        <input type="text" class="form-control" ng-model="dialogInfo.V_topics.item3">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6" ng-if="data.V_CMSCategory.item4_show== true">
+                                    <div class="form-group form-inline">
+                                        <input type="text" readonly="readonly" style="border-style:none" ng-model="data.V_CMSCategory.item4" />
+                                        <input type="text" class="form-control" ng-model="dialogInfo.V_topics.item4">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6" ng-if="data.V_CMSCategory.item5_show== true">
+                                    <div class="form-group form-inline">
+                                        <input type="text" readonly="readonly" style="border-style:none" ng-model="data.V_CMSCategory.item5" />
+                                        <input type="text" class="form-control" ng-model="dialogInfo.V_topics.item5">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6" ng-if="data.V_CMSCategory.item6_show== true">
+                                    <div class="form-group form-inline">
+                                        <input type="text" readonly="readonly" style="border-style:none" ng-model="data.V_CMSCategory.item6" />
+                                        <input type="text" class="form-control" ng-model="dialogInfo.V_topics.item6">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6" ng-if="data.V_CMSCategory.item7_show== true">
+                                    <div class="form-group form-inline">
+                                        <input type="text" readonly="readonly" style="border-style:none" ng-model="data.V_CMSCategory.item7" />
+                                        <input type="text" class="form-control" ng-model="dialogInfo.V_topics.item7">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6" ng-if="data.V_CMSCategory.item9_show== true">
+                                    <div class="form-group form-inline">
+                                        <input type="text" readonly="readonly" style="border-style:none" ng-model="data.V_CMSCategory.item9" />
+                                        <input type="text" id="datepickers" class="form-control datepicker" readonly="readonly" ng-model="dialogInfo.V_topics.item9">
+                                        @*<input name="text" onFocus="setday(this);" readonly class="form-control">*@
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6" ng-if="data.V_CMSCategory.item10_show== true">
+                                    <div class="form-group form-inline">
+                                        <input type="text" readonly="readonly" style="border-style:none" ng-model="data.V_CMSCategory.item10" />
+                                        <select ng-model="dialogInfo.V_topics.item10" class="form-control" id="txtBit">
+                                            <option value="">--请选择--</option>
+                                            <option ng-repeat="x in data.L_Bit" value="{{x.Key}}" id="location">{{x.Value}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6" ng-if="data.V_CMSCategory.item8_show== true">
+                                    <div class="form-group form-inline">
+                                        <input type="text" readonly="readonly" style="border-style:none" ng-model="data.V_CMSCategory.item8" />
+                                        <input type="text" class="form-control" ng-model="dialogInfo.V_topics.item8">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6" ng-if="data.V_CMSCategory.description_show== true">
+                                    <div class="form-group form-inline">
+                                        <input type="text" readonly="readonly" style="border-style:none" ng-model="data.V_CMSCategory.description" />
+                                        <textarea cols="60" rows="7" class="form-control" ng-model="dialogInfo.V_topics.description"></textarea>
+                                        @*<input type="text" >*@
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary" ng-click="saveItem()">Save</button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="modal fade" data-backdrop="static" id="DetailModal" tabindex="-1" role="dialog" aria-labelledby="DetailModalLabel" aria-hidden="true" style="display: none;">
+                <div class="modal-dialog" style="float:left;left:20%;width:60%">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h4 class="modal-title" id="simpleModalLabel">备注内容</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="floating-label">
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6" ng-if="data.V_CMSCategory.description_show== true">
+                                    <div class="form-group form-inline">
+                                        <input type="text" readonly="readonly" style="border-style:none" ng-model="data.V_CMSCategory.description" />
+                                        <textarea cols="60" rows="7" class="form-control" ng-model="dialogInfo.V_topics.description" readonly="readonly"></textarea>
+                                        @*<input type="text" >*@
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    </div>
+            
+
+
+<script type="text/javascript">
+    $(function () {
+        $(".datepicker").datepicker();
+    });
+    var MainInfo = {
+        data:@(Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model,new Newtonsoft.Json.Converters.JavaScriptDateTimeConverter()))),
+        dialogInfo_def_data: {},
+        dialogInfo: {},
+        is_edit_flag: false,
+        edit_quotation_item_i: 0,
+        scope: null,
+        getscope: function () {
+            //通过controller来获取Angular应用
+            var appElement = document.querySelector('[ng-controller=myCtrl]');
+            //获取$scope变量
+            var $scope = angular.element(appElement).scope();
+            return $scope;
+        },
+        initial: function () {
+            MainInfo.scope = MainInfo.getscope();
+        },
+        checkfiles: function () {
+            var formData = new FormData($("#uploadFormss")[0]);
+             $.ajax({
+            async: false,
+            cache: false,
+            type: "post",
+            data: formData,
+            url: "@Url.Action("AddPPT", "PEMain")",
+            dataType: 'json',
+            contentType: false, //必须
+            processData: false, //必须
+            success: function (data) {
+                MainInfo.dialogInfo.V_topics.attachment = data.filepath;
+                $("#divfile").hide();
+                MainInfo.dialogInfo.V_topics.filename = data.filename;
+                //$("#filename").val(data.filename);
+            },
+            error: function (arg1, arg2, arg3) {
+
+            }
+        });
+        },
+        checkfile: function () {
+            var formData = new FormData($("#uploadForm")[0]);
+            console.log(formData);
+        $.ajax({
+            async: false,
+            cache: false,
+            type: "post",
+            data: formData,
+            url: "@Url.Action("AddPPT", "PEMain")",
+            dataType: 'json',
+            contentType: false, //必须
+            processData: false, //必须
+            success: function (data) {
+                MainInfo.dialogInfo.V_topics.attachment = data.filepath;
+                $("#divfile").hide();
+                MainInfo.dialogInfo.V_topics.filename = data.filename;
+                //$("#filename").val(data.filename);
+            },
+            error: function (arg1, arg2, arg3) {
+
+            }
+        });
+        },
+        openfile: function () {
+            $("#divfile").show();
+        },
+        closefile: function () {
+            $("#divfile").hide();
+        },
+        c_categoryname: function () {
+            var url = "@Url.Action("C_Name_Info", "PEMain")";
+            var data = { id: $("#txtname").val() };
+            $.post(url, data, function (data, textStatus, jqXHR) {
+                MainInfo.dialogInfo.V_CMSCategory = deepClone(data.info);
+                MainInfo.scope.$apply();
+                $("#txtname").val(data.info.id);
+            }, "json");
+        },
+        saveColumn: function () {
+            //var savadata = {};
+            //savadata.V_CMSCategory = deepClone(MainInfo.dialogInfo.PEModel.V_CMSCategory);
+            var url = "@Url.Action("UpdateColumn", "PEMain")";
+            $.post(url, MainInfo.dialogInfo.V_CMSCategory, function (data, textStatus, jqXHR) {
+                if (data.result == true) {
+                    MainInfo.data.V_CMSCategory = deepClone(MainInfo.dialogInfo.V_CMSCategory);
+                    MainInfo.scope.$apply();
+                    $("#simpleModal").modal('toggle');
+                    }
+                }, "json");
+        },
+        openColumn: function () {
+            MainInfo.dialogInfo.V_CMSCategory = deepClone(MainInfo.data.V_CMSCategory);
+        },
+        addItem: function () {
+            MainInfo.dialogInfo.V_topics = {};
+            MainInfo.is_edit_flag = false;
+            $("#filedata").after($("#filedata").clone().val(""));
+            $("#filedata").remove();
+            jQuery("#simpleModalLabel").html("Add Item");
+        },
+        showdes: function (ids) {
+            MainInfo.dialogInfo.V_topics = deepClone(MainInfo.data.L_topics[ids]);
+        },
+        editItem: function (ids) {
+            MainInfo.is_edit_flag = true;
+            MainInfo.edit_quotation_item_i = ids;
+            MainInfo.dialogInfo.V_topics = deepClone(MainInfo.data.L_topics[ids]);
+            MainInfo.dialogInfo.V_topics.createdt = datetimeformat(MainInfo.data.L_topics[ids].createdt);
+            if ($("#itemnine").length > 0) {
+                MainInfo.dialogInfo.V_topics.item9 = datetimeformat(MainInfo.data.L_topics[ids].item9);
+            }
+        },
+        saveItem: function () {
+            MainInfo.dialogInfo.V_topics.tid = MainInfo.data.V_CMSCategory.id;
+            if ($("#txtstate").val()=="") {
+                MainInfo.dialogInfo.V_topics.state = "Open";
+            }
+            if (MainInfo.is_edit_flag == false)
+            {
+                var url="@Url.Action("AddData", "PEMain")";
+                $.post(url, MainInfo.dialogInfo.V_topics, function (data, textStatus, jqXHR) {
+                    if (data.result == true) {
+                        MainInfo.dialogInfo.V_topics.createdt = data.createdate;
+                        MainInfo.dialogInfo.V_topics.username = data.username;
+                        MainInfo.dialogInfo.V_topics.attachment = data.files;
+                        MainInfo.dialogInfo.V_topics.item9 = data.item9;
+                        MainInfo.data.L_topics.unshift(deepClone(MainInfo.dialogInfo.V_topics));
+                        location.reload()
+                        MainInfo.scope.$apply();
+                        //location.reload();
+                        $("#ItemModal").modal('toggle');
+
+                    }
+                }, "json");
+            }
+            else
+            {
+                var url = "@Url.Action("EditData", "PEMain")";
+                $.post(url, MainInfo.dialogInfo.V_topics, function (data, textStatus, jqXHR) {
+                    if (data.result == true) {
+                        MainInfo.dialogInfo.V_topics.updatedt = data.update;
+                        MainInfo.data.L_topics[MainInfo.edit_quotation_item_i] = deepClone(MainInfo.dialogInfo.V_topics);
+                        MainInfo.scope.$apply();
+                        $('#ItemModal').modal('toggle');
+                    }
+                }, "json");
+            }
+        },
+        deleteItem: function (ids) {
+            MainInfo.data.L_topics[ids].createdt = datetimeformat(MainInfo.data.L_topics[ids].createdt);
+            var url = "@Url.Action("DeleteData", "PEMain")";
+            $.post(url, MainInfo.data.L_topics[ids], function (data, textStatus, jqXHR) {
+                if (data.result == true) {
+                    MainInfo.data.L_topics.splice(ids, 1);
+                    MainInfo.scope.$apply();
+                }
+            }, "json");
+        },
+        checkstate: function (item) {
+            if (item == "Close")
+                return false;
+            if (item == "Open")
+                return true;
+        }
+
+    };
+    //MainInfo.data.dialogInfo = {};
+    var app=angular.module('myApp', []).controller('myCtrl', ['$scope', myCtrl1]);
+    function myCtrl1($scope) {
+        $scope.data = MainInfo.data;
+        $scope.dialogInfo = MainInfo.dialogInfo;
+        $scope.saveColumn = MainInfo.saveColumn;
+        $scope.openColumn = MainInfo.openColumn;
+        $scope.addItem = MainInfo.addItem;
+        $scope.saveItem = MainInfo.saveItem;
+        $scope.editItem = MainInfo.editItem;
+        $scope.datetimeformat = function (o) {
+            return datetimestrformat(o, 'yyyy-MM-dd');
+        };
+        $scope.deleteItem = MainInfo.deleteItem;
+        $scope.c_categoryname = MainInfo.c_categoryname;
+        //$scope.getSearch = MainInfo.getSearch;
+        $scope.openfile = MainInfo.openfile;
+        $scope.closefile = MainInfo.closefile;
+        $scope.checkfile = MainInfo.checkfile;
+        $scope.showdes = MainInfo.showdes;
+        $scope.checkstate = MainInfo.checkstate;
+        $scope.checkfiles = MainInfo.checkfiles;
+    };
+    app.filter('reverse', function () { //可以注入依赖
+        return function (text) {
+            return text.substring(0, text.length - 17);
+        }
+    });
+    $(function () {
+        MainInfo.initial();
+    });
+    $(".form_datetime").datetimepicker({ format: 'yyyy-mm-dd hh:ii' });
+
+</script>

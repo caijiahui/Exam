@@ -1,0 +1,102 @@
+
+
+/*表格//分页*/
+
+.table-bordered>tbody>tr>td,.table-bordered>thead>tr>th{
+	text-align: center;
+}
+.table-bordered>tbody>tr>td{
+	border-color:#aab4ca;
+}
+.table thead>tr>th{
+	background:#10277d;
+	color:#fff;
+	border-color:#aab4ca;
+}
+.nextLink,.prevLink{
+    font-size: 12px;
+      line-height: 24px;
+    height: 24px;
+    border: solid 1px #aaa;
+    color: #999;
+    padding: 0 9px;
+    margin: 0 0 0 5px;
+    list-style: none;
+    background: #f2f2f2;
+    cursor: pointer;
+}
+
+a.prevLink:hover,a.nextLink:hover {
+    background: #aaa !important;
+    color: #fff !important;
+    cursor: pointer;
+}
+
+.step {
+    display: inline-block;
+    line-height: 24px;
+    height: 24px;
+    border: solid 1px #aaa;
+    color: #999;
+    background: #fff;
+    padding: 0 9px;
+    font-size: 12px;
+    margin: 0 0 0 5px;
+    list-style: none;
+    cursor: pointer;
+}
+.currentStep{
+    border-color: #fff;
+    padding: 0 4px;
+    color: #f90;
+    font-weight: bold;
+    display: inline-block;
+    line-height: 24px;
+    height: 24px;
+    padding: 0 9px;
+    font-size: 12px;  
+    margin: 0 0 0 5px;
+    list-style: none;
+    cursor: pointer;
+}
+
+.modelselect {
+  border: 1px solid #bbc7dc;
+  padding: 5px 10px;
+  height: 37px;
+  font-size: 16px;
+  cursor:pointer;
+  appearance: menulist;
+  -moz-appearance: menulist;
+  /* Firefox */
+  -webkit-appearance: menulist;
+  /* Safari and Chrome */
+}
+.modelbtn span {
+  display: inline-block;
+  background: #bbc7dc;
+  height: 37px;
+  padding: 0 10px;
+  line-height: 37px;
+  border: 1px solid #bbc7dc;
+  cursor:pointer;
+}
+.modelform {
+  border: 1px solid #bbc7dc;
+  text-indent: 1em;
+}
+
+.floating-label .form-control~label{
+  top:2px;
+  font-size:12px;
+}
+.floating-label .form-control:focus~label{
+  top:-12px;
+}
+
+.floating-label .form-control.dirty~label{
+  top:-12px;
+}
+.floating-label .form-control{
+  text-indent:10px;
+}

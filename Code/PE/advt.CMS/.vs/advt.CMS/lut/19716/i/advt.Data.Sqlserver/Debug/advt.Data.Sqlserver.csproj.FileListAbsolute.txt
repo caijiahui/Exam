@@ -1,0 +1,5 @@
+E:\Work\ICOTS_Work\PEWork\Code\PE\advt.CMS\.vs\advt.CMS\lut\0\b\advt.Data.Sqlserver\bin\Debug\advt.Data.Sqlserver.dll
+E:\Work\ICOTS_Work\PEWork\Code\PE\advt.CMS\.vs\advt.CMS\lut\0\i\advt.Data.Sqlserver\Debug\advt.Data.Sqlserver.csprojAssemblyReference.cache
+E:\Work\ICOTS_Work\PEWork\Code\PE\advt.CMS\.vs\advt.CMS\lut\0\i\advt.Data.Sqlserver\Debug\advt.Data.Sqlserver.csproj.CoreCompileInputs.cache
+E:\Work\ICOTS_Work\PEWork\Code\PE\advt.CMS\.vs\advt.CMS\lut\0\i\advt.Data.Sqlserver\Debug\advt.Data.Sqlserver.csproj.CopyComplete
+E:\Work\ICOTS_Work\PEWork\Code\PE\advt.CMS\.vs\advt.CMS\lut\0\i\advt.Data.Sqlserver\Debug\advt.Data.Sqlserver.dll

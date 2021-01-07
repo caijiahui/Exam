@@ -1,0 +1,144 @@
+﻿@model advt.Model.PageModel.PEModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Scripts/common.js"></script>
+<link href="~/Scripts/jquery-ui.min.css" rel="stylesheet" />
+<link href="~/Scripts/jquery-ui.min.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-ui.min.js"></script>
+<div id="content">
+    <section>
+        <div ng-app="myApp" ng-controller="myCtrl" ng-cloak="">
+            <div class="text-center"><h2>权限管理</h2></div>
+            @using (Html.BeginForm("User_type", "PEMain", FormMethod.Get))
+            {
+                <div style="margin-bottom:40px;display:inline">
+                    <div class="modelsel" style="display:inline-block;vertical-align:bottom;">
+                        <label>User_Id</label>
+                    </div>
+                    <div class="modelinput" style="display:inline-block; width:20%;margin-left:20px;">
+                        @Html.TextBox("userid", null, new { @class = "modelform form-control" })
+                        @Html.Hidden("tname", @Model.tname, new { @class = "modelform form-control" })
+                    </div>
+                </div>
+                <div style="text-align:center;margin-top:40px">
+                    <button class="btn btn-primary" type="submit"><i class="fa fa-search"></i> 查找</button>
+                </div>
+            }
+                <div>
+                    <table class="table table-bordered table-hover table-responsive" style="margin-top:10px">
+                        <thead>
+                            <tr>
+                                <th>User_Name</th>
+                                <th>Type</th>
+                                <th>Location</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="item in data.L_usertype">
+                                <td>{{item.username}}</td>
+                                <td>{{item.type}}</td>
+                                <td>{{item.location}}</td>
+                                <td>
+                                    <a ng-click="editItem($index)" data-toggle="modal" data-target="#ItemModal"><i class="fa fa-edit fa-lg"></i></a>&nbsp;&nbsp;
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="top10 paginationwrap">
+                        <div class="Pagination y">
+                            @Html.Pagination((int)ViewBag.PageSize, (int)ViewBag.Index, (int)ViewBag.RecordCount, new { @ViewType = 1, @Template = "{List}", @Postfix = "", @VirtualPath = "", @Identifier = "page", @Encrypt = false })
+                        </div>
+                    </div>
+                </div>
+
+            <div class="modal fade" id="ItemModal" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true" style="display: none;">
+                <div class="modal-dialog" style="float:left;left:20%;width:60%">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h4 class="modal-title" id="simpleModalLabel">编辑内容</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group form-inline">
+                                        <label>类型</label>
+                                        <select ng-model="dialogInfo.V_usertype.type" class="form-control" ng-options="v.Value as v.Key for v in  data.L_type">
+                                            <option value="">--请选择--</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group form-inline">
+                                        <label>职位</label>
+                                        <select ng-model="dialogInfo.V_usertype.location" class="form-control" ng-options="v.Value as v.Key for v in  data.L_Location">
+                                            <option value="">--请选择--</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary" ng-click="saveItem()">Save</button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</div>
+<script type="text/javascript">
+    var MainInfo = {
+     data:@(Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model,new Newtonsoft.Json.Converters.JavaScriptDateTimeConverter()))),
+        dialogInfo_def_data: {},
+        dialogInfo: {},
+        is_edit_flag: false,
+        edit_quotation_item_i: 0,
+        scope: null,
+        getscope: function () {
+            //通过controller来获取Angular应用
+            var appElement = document.querySelector('[ng-controller=myCtrl]');
+            //获取$scope变量
+            var $scope = angular.element(appElement).scope();
+            return $scope;
+        },
+        initial: function () {
+            MainInfo.scope = MainInfo.getscope();
+        },
+        editItem: function (ids) {
+            MainInfo.edit_quotation_item_i = ids;
+            MainInfo.dialogInfo.V_usertype = deepClone(MainInfo.data.L_usertype[ids]);
+
+        },
+        saveItem: function () {
+              var url = "@Url.Action("EditUser", "PEMain")";
+            $.post(url, MainInfo.dialogInfo.V_usertype, function (data, textStatus, jqXHR) {
+                if (data.result == true) {
+                        //MainInfo.dialogInfo.V_topics.updatedt = data.update;
+                        //MainInfo.dialogInfo.V_topics.createdt = data.createdt;
+                        MainInfo.data.L_usertype[MainInfo.edit_quotation_item_i] = deepClone(MainInfo.dialogInfo.V_usertype);
+                        MainInfo.scope.$apply();
+                        $('#ItemModal').modal('toggle');
+                    }
+                }, "json");
+        }
+    }
+    var app = angular.module('myApp', []).controller('myCtrl', ['$scope', myCtrl1]);
+    function myCtrl1($scope) {
+        $scope.data = MainInfo.data;
+        $scope.dialogInfo = MainInfo.dialogInfo;
+        $scope.saveItem = MainInfo.saveItem;
+        $scope.editItem = MainInfo.editItem;
+    };
+    $(function () {
+        MainInfo.initial();
+    });
+</script>
+

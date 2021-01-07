@@ -1,0 +1,11 @@
+E:\PE\advt.CMS\advt.Entity\bin\Debug\advt.Entity.dll
+E:\PE\advt.CMS\advt.Entity\bin\Debug\advt.Entity.pdb
+E:\PE\advt.CMS\advt.Entity\obj\Debug\advt.Entity.csproj.CoreCompileInputs.cache
+E:\PE\advt.CMS\advt.Entity\obj\Debug\advt.Entity.dll
+E:\PE\advt.CMS\advt.Entity\obj\Debug\advt.Entity.pdb
+E:\PE\advt.CMS\advt.Entity\obj\Debug\advt.Entity.csprojAssemblyReference.cache
+E:\Work\ICOTS_Work\PEWork\Code\PE\advt.CMS\advt.Entity\bin\Debug\advt.Entity.dll
+E:\Work\ICOTS_Work\PEWork\Code\PE\advt.CMS\advt.Entity\bin\Debug\advt.Entity.pdb
+E:\Work\ICOTS_Work\PEWork\Code\PE\advt.CMS\advt.Entity\obj\Debug\advt.Entity.csproj.CoreCompileInputs.cache
+E:\Work\ICOTS_Work\PEWork\Code\PE\advt.CMS\advt.Entity\obj\Debug\advt.Entity.dll
+E:\Work\ICOTS_Work\PEWork\Code\PE\advt.CMS\advt.Entity\obj\Debug\advt.Entity.pdb

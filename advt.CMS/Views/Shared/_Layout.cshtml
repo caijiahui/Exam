@@ -1,0 +1,260 @@
+﻿@model advt.Model.PageModel.PEModel
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <title>@ViewBag.Title - 研华科技</title>
+    @RenderSection("head", required: false)
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/js/libs/jquery/jquery-1.11.2.min.js"></script>
+    <script src="~/Scripts/js/libs/jquery/jquery-migrate-1.2.1.min.js"></script>
+    <script src="~/Scripts/js/libs/bootstrap/bootstrap.min.js"></script>
+    <script src="~/Scripts/js/libs/spin/spin.min.js"></script>
+    <script src="~/Scripts/js/libs/autosize/jquery.autosize.min.js"></script>
+    <script src="~/Scripts/js/libs/nanoscroller/jquery.nanoscroller.min.js"></script>
+    <link href="~/Scripts/theme-default/mystyle.css" rel="stylesheet" />
+    <script src="~/Scripts/js/libs/toastr/toastr.js"></script>
+    <script src="~/Scripts/js/core/source/App.js"></script>
+    <script src="~/Scripts/js/core/source/AppNavigation.js"></script>
+    <script src="~/Scripts/js/core/source/AppOffcanvas.js"></script>
+    <script src="~/Scripts/js/core/source/AppCard.js"></script>
+    <script src="~/Scripts/js/core/source/AppForm.js"></script>
+    <script src="~/Scripts/js/core/source/AppNavSearch.js"></script>
+    <script src="~/Scripts/js/core/source/AppVendor.js"></script>
+    <script src="~/Scripts/js/core/demo/Demo.js"></script>
+    <script src="~/Scripts/js/core/demo/DemoLayout.js"></script>
+    <script src="~/Scripts/js/libs/angular/angular.min.js"></script>
+    <script src="~/Scripts/js/core/demo/DemoUIMessages.js"></script>
+
+    <link href="~/Scripts/theme-default/bootstrap.css" rel="stylesheet" />
+    <link href="~/Scripts/theme-default/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Scripts/theme-default/material-design-iconic-font.min.css" rel="stylesheet" />
+    <link href="~/Scripts/theme-default/materialadmin.css" rel="stylesheet" />
+    <link href="~/Scripts/theme-default/mystyle.css" rel="stylesheet" />
+    <link href="~/Scripts/theme-default/toastr.css" rel="stylesheet" />
+</head>
+@*@Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+<body class="menubar-hoverable header-fixed header-single">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+                <header id="header">
+                    <div class="headerbar">
+                        <div class="headerbar-left">
+                            <ul class="header-nav header-nav-options">
+                                <li class="header-nav-brand">
+                                    <div class="brand-holder">
+                                        <a href="#">
+                                            <span class="text-lg text-bold text-primary">
+                                                <font style="vertical-align:inherit">ICTOS平台管理</font>
+                                                @if (Model.tname == "Engineering")
+                                                {
+                                                    <font style="vertical-align:inherit">(工程管理)</font>
+                                                }
+                                                @if (Model.tname == "Quality")
+                                                {
+                                                    <font style="vertical-align:inherit">(品质管理)</font>
+                                                }
+                                                @if (Model.tname == "Production")
+                                                {
+                                                    <font style="vertical-align:inherit">(生产管理)</font>
+                                                }
+
+                                            </span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="btn btn-icon-toggle menubar-toggle" data-toggle="menubar" href="#">
+                                        <i class="fa fa-bars"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="headerbar-right">
+                            <ul class="header-nav header-nav-options header-nav header-nav-profile">
+                                <li></li>
+                                <li class="dropdown hidden-xs dropdown">
+                                    <a href="#" class="btn btn-icon-toggle btn-default" data-toggle="dropdown" aria-expanded="false">
+                                        <img src="~/Images/timgs.png" />
+                                        @Model.username
+                                    </a>
+                                    <ul class="dropdown-menu animation-expand">
+                                        <li class="dropdown-header"></li>
+                                        <li>
+                                            <a href="@Url.Action("Classify","PEMain")" class="alert alert-callout alert-warning">
+                                                返回主页面
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="alert alert-callout alert-warning" href="@Url.Action("LogOff", "Account")">
+                                                <strong>注销账号</strong><br>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    
+                                </li>
+                                <li>
+                                    
+                                   
+                                </li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                </header>
+            </div>
+        </div>
+    <div id="base">
+        <div class="offcanvas">
+            <!-- 〜左画布内容到这里〜 -->
+        </div>
+        <div class="offcanvas">
+            <div id="offcanvas-search" class="offcanvas-pane width-8">
+                <div class="offcanvas-head">
+                    <header class="text-primary">Search</header>
+                    <div class="offcanvas-tools">
+                        <a href="#" class="btn btn-icon-toggle btn-default-light pull-right" data-dismiss="offcanvas"><i class="fa fa-close"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="menubar">
+            <div class="menubar-fixed-panel">
+                <div>
+                    〜始终可见的内容在这里〜
+                </div>
+                <div class="expanded">
+                    当菜单展开时，您的徽标到这里〜
+                </div>
+            </div>
+            <div class="nano has-scrollbar">
+                <div class="nano-content">
+                    <div class="menubar-scroll-panel">
+                        <ul id="main-menu" class="gui-controls gui-controls-tree">
+                            <li>
+                                <a href="@Url.Action("MaintainExamType", "PEMain",new {tname="Engineering" })">
+                                    <div class="gui-icon"><i class="fa fa-indent"></i></div>
+                                    <span class="title">考试类型</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index", "PEMain",new {tid=1,tname="Engineering" })">
+                                    <div class="gui-icon"><i class="fa fa-file-text-o"></i></div>
+                                    <span class="title">案例分享</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index", "PEMain",new {tid=3,tname="Engineering" })">
+                                    <div class="gui-icon"><i class="fa fa-code"></i></div>
+                                    <span class="title">外来软件管理</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index", "PEMain",new {tid=4,tname="Engineering" })">
+                                    <div class="gui-icon"><i class="fa fa-spinner"></i></div>
+                                    <span class="title">新机种生产进度</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index", "PEMain",new {tid=5,tname="Engineering" })">
+                                    <div class="gui-icon"><i class="fa fa-line-chart"></i></div>
+                                    <span class="title">专案优化</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index", "PEMain",new {tid=6,tname="Engineering" })">
+                                    <div class="gui-icon"><i class="fa fa-file-pdf-o"></i></div>
+                                    <span class="title">3C资料分享</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index", "PEMain",new {tid=7,tname="Engineering" })">
+                                    <div class="gui-icon"><i class="fa fa-star"></i></div>
+                                    <span class="title">镜像异常事项</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index", "PEMain",new {tid=9,tname="Engineering"})">
+                                    <div class="gui-icon"><i class="glyphicon glyphicon-th"></i></div>
+                                    <span class="title">表单模块</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index", "PEMain",new {tid=10,tname="Engineering"})">
+                                    <div class="gui-icon"><i class="glyphicon glyphicon-th-large"></i></div>
+                                    <span class="title">公告模块</span>
+                                </a>
+                            </li>
+                            @if (Model.tname == "Quality")
+                            {
+                                <li>
+                                    <a href="@Url.Action("Index", "PEMain",new {tid=2,tname="Quality" })">
+                                        <div class="gui-icon"><i class="fa fa-file-o"></i></div>
+                                        <span class="title">文件管控</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Index", "PEMain",new {tid=8,tname="Quality"})">
+                                        <div class="gui-icon"><i class="fa fa-file-o"></i></div>
+                                        <span class="title">签拟单/特采单</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Index", "PEMain",new {tid=11,tname="Quality"})">
+                                        <div class="gui-icon"><i class="fa fa-file-o"></i></div>
+                                        <span class="title">QC异常汇总</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Index", "PEMain",new {tid=12,tname="Quality"})">
+                                        <div class="gui-icon"><i class="fa fa-file-o"></i></div>
+                                        <span class="title">客诉</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Index", "PEMain",new {tid=13,tname="Quality"})">
+                                        <div class="gui-icon"><i class="fa fa-file-o"></i></div>
+                                        <span class="title">重大品质异常</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Index", "PEMain",new {tid=14,tname="Quality"})">
+                                        <div class="gui-icon"><i class="fa fa-file-o"></i></div>
+                                        <span class="title">品质管控履历表</span>
+                                    </a>
+                                </li>
+                            }
+                            @if (Model.tname == "Production")
+                            {
+
+                            }
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content" style="background-color:white">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - PE管理平台</p>
+            </footer>
+        </div>
+    </div>
+
+
+    @*@Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")*@
+    @RenderSection("scripts", required: false)
+</body>
+</html>
